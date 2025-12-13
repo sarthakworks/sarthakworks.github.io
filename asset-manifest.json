@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.921b9fd4.css",
-    "main.js": "./static/js/main.ec48a7c7.js",
+    "main.js": "./static/js/main.c736926c.js",
     "static/media/materialdesignicons-webfont1d2d.eot?v=6.5.95": "./static/media/materialdesignicons-webfont1d2d.e044ed23c047e571c550.eot",
     "static/media/materialdesignicons-webfontd41d.eot": "./static/media/materialdesignicons-webfontd41d.e044ed23c047e571c550.eot",
     "static/media/materialdesignicons-webfont1d2d.ttf?v=6.5.95": "./static/media/materialdesignicons-webfont1d2d.5d42b4e60858731e7b65.ttf",
@@ -34,7 +34,6 @@
     "static/media/Nunito-Bold.woff": "./static/media/Nunito-Bold.a229907112951d36fed2.woff",
     "static/media/Nunito-SemiBold.woff": "./static/media/Nunito-SemiBold.03392c015e48a5e821e6.woff",
     "static/media/Nunito-Regular.woff": "./static/media/Nunito-Regular.328e9506b6f5c2f2622a.woff",
-    "static/media/Sarthak_Resume.pdf": "./static/media/Sarthak_Resume.2d53776f7a8b59279ea6.pdf",
     "static/media/AWS.pdf": "./static/media/AWS.59e077a154afc4dd36cc.pdf",
     "static/media/dripicons-v2.eot": "./static/media/dripicons-v2.7f392f1e4787b46b3e8b.eot",
     "static/media/dripicons-v2d41d.eot": "./static/media/dripicons-v2d41d.7f392f1e4787b46b3e8b.eot",
@@ -45,10 +44,10 @@
     "static/media/bg-pattern-light.svg": "./static/media/bg-pattern-light.deab02c786c1658edba9.svg",
     "static/media/fontsunicons8adf.html?34404611": "./static/media/fontsunicons8adf.bf31e1c8750a4f1ea660.html",
     "main.921b9fd4.css.map": "./static/css/main.921b9fd4.css.map",
-    "main.ec48a7c7.js.map": "./static/js/main.ec48a7c7.js.map"
+    "main.c736926c.js.map": "./static/js/main.c736926c.js.map"
   },
   "entrypoints": [
     "static/css/main.921b9fd4.css",
-    "static/js/main.ec48a7c7.js"
+    "static/js/main.c736926c.js"
   ]
 }
