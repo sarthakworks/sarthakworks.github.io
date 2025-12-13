@@ -27,7 +27,17 @@ function Folder({ handleInsertNode, explorer }) {
   if (explorer.isFolder) {
     return (
       <div style={{ marginTop: 5 }}>
-        <div className="folder" onClick={() => setExpand(!expand)}>
+        <div
+          className="folder"
+          onClick={() => setExpand(!expand)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              setExpand(!expand);
+            }
+          }}
+        >
           <span className="font-20 mdi mdi-folder-outline">
             {" "}
             {explorer.name}
@@ -38,11 +48,25 @@ function Folder({ handleInsertNode, explorer }) {
               title="Add folder"
               className="mdi mdi-folder-plus-outline pointer link-primary font-20 "
               onClick={(e) => handleNewFolder(e, true)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  handleNewFolder(e, true);
+                }
+              }}
             ></span>
             <span
               title="Add file"
               className="mdi mdi-note-plus-outline pointer link-primary font-20 "
               onClick={(e) => handleNewFolder(e, false)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  handleNewFolder(e, false);
+                }
+              }}
             >
               {" "}
             </span>
@@ -64,7 +88,6 @@ function Folder({ handleInsertNode, explorer }) {
                 onKeyDown={onAddFolder}
                 onBlur={() => setShowInput({ ...showInput, visible: false })}
                 className="inputContainer__input"
-                autoFocus
               />
             </div>
           )}

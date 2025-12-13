@@ -162,8 +162,9 @@ function React() {
                 Batch update this process is called reconcilliation
               </p>
               <p className="text-primary">
-                Dom ->virtual dom & current virtual dom-> diffing algo-> various
-                changes accumulated-> Batch update-> change to origincal Dom
+                Dom -&gt;virtual dom & current virtual dom-&gt; diffing
+                algo-&gt; various changes accumulated-&gt; Batch update-&gt;
+                change to origincal Dom
               </p>
               <p>
                 React donot update Dom tree directly, It creates an in-memory
@@ -376,7 +377,7 @@ function React() {
                   State From The Initial State. It Returns The Previous State As
                   It Is If No Work Needs To Be Done.
                   <p className="text-danger">
-                    export default combineReducers({"{"}todos, counter{"}"}})
+                    export default combineReducers({"{"}todos, counter{"}"})
                   </p>
                 </li>
                 <li>
@@ -510,7 +511,7 @@ function React() {
               <p className="text-danger">
                 <span>import sum from './sum'</span> <br />
                 <span className="mx-2">
-                  test('adds 1 + 2 to equal 3', () => {"{"}
+                  test('adds 1 + 2 to equal 3', () =&gt; {"{"}
                 </span>{" "}
                 <br />
                 <span className="mx-4">expect(sum(1, 2)).toBe(3))</span> <br />

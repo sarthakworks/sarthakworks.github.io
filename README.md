@@ -14,6 +14,14 @@ Developer - Sarthak Bansal
 contact - sarthak.workplace@gmail.com
 linkedn - https://www.linkedin.com/in/sarthakworks/
 
+
+## VS Code Configuration
+
+This project includes a `.vscode` folder to ensure a consistent development environment for all contributors.
+
+- **`.vscode/settings.json`**: Contains shared editor settings (formatting, linting rules) to enforce code style automatically.
+- **`.vscode/extensions.json`**: Lists recommended VS Code extensions (ESLint, Prettier, SonarLint) that should be installed for the best experience.
+
 ## Deployment
 
 This project is configured for automated deployment to **GitHub Pages** and supports **Netlify**.

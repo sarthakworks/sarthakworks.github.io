@@ -45,7 +45,7 @@ export default [
                 'warn',
                 { allowConstantExport: true },
             ],
-            'no-unused-vars': 'warn',
+            'no-unused-vars': 'error',
         },
     },
 ];

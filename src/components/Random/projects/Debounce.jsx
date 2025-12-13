@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Debounce() {
   const [deb, setDeb] = useState(0);
-  const [thr, setThr] = useState(0);
 
   function debounce(cb, delay) {
     let timer;
@@ -32,7 +31,7 @@ function Debounce() {
         <div className="col-lg-5">
           <button
             className="btn btn-primary m-1"
-            onClick={debounce((e) => setDeb(deb + 1), 1000)}
+            onClick={debounce(() => setDeb(deb + 1), 1000)}
           >
             Click Me Debounce
           </button>
@@ -40,7 +39,7 @@ function Debounce() {
         <div className="col-lg-5">
           <button
             className="btn btn-primary m-1"
-            onClick={throttle((e) => console.log("throttle"), 2000)}
+            onClick={throttle(() => console.log("throttle"), 2000)}
           >
             Click Me Throttle
           </button>

@@ -1,4 +1,3 @@
-import { Outlet } from "react-router-dom";
 import Card from "../shared/Card";
 
 function Javascript() {
@@ -473,7 +472,7 @@ function Javascript() {
                 if only one value is return in 1 statement skip {} braces and
                 return keyword
               </p>
-              <p className="text-danger">const any = i => i+1; </p>
+              <p className="text-danger">const any = i =&gt; i+1; </p>
               <p>
                 with arrow functions there are no binding of this keyword to
                 owner object.With arrow functions the this keyword always

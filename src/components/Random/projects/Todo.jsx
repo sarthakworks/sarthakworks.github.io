@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Todo() {
   const [todo, setTodo] = useState(["washing", "clothings", "iron"]);
@@ -74,11 +74,26 @@ function Todo() {
                   setEditText(i);
                 }}
                 className="pointer link-success font-20 mdi mdi-pencil-outline"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    setEdit(index);
+                    setEditText(i);
+                  }
+                }}
               ></span>
               <span
                 title="delete"
                 onClick={() => deleteme(i)}
                 className="pointer link-danger font-20 mdi mdi-delete"
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    deleteme(i);
+                  }
+                }}
               ></span>
             </div>
           </li>

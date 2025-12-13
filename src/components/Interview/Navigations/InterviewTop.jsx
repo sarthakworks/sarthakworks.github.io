@@ -5,8 +5,6 @@ function InterviewTop() {
     textDecoration: "underline",
   };
 
-  let activeClassName = "underline";
-
   return (
     <>
       <div className="flex-space-evenly">

@@ -3,7 +3,7 @@ import { useState } from "react";
 function KanbanForm({ handleAdd }) {
   const [desc, setDesc] = useState("Description");
   const [priority, setPriority] = useState("High");
-  const [btnDisabled, setBtnDisabled] = useState(true);
+
   const [owner, setOwner] = useState("sarthak");
   const [title, setTitle] = useState("Web Development");
   const [date, setDate] = useState("12-04-2023");
@@ -112,8 +112,11 @@ function KanbanForm({ handleAdd }) {
                 <div className="row">
                   <div className="col-md-8">
                     <div className="mb-3">
-                      <label className="form-label">Project</label>
+                      <label htmlFor="task-project" className="form-label">
+                        Project
+                      </label>
                       <select
+                        id="task-project"
                         onChange={handleProjectChange}
                         value={project}
                         className="form-select form-control-light"

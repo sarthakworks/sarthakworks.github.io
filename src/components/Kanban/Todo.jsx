@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 function Todo({ Taskdata, handleDelete }) {
   return (
     <>
@@ -12,7 +10,7 @@ function Todo({ Taskdata, handleDelete }) {
         <div id="task-list-one" className="task-list-items">
           {/* Task Item */}
           {Taskdata.filter((i) => i.step.toLowerCase() === "todo").map(
-            (item, index) => (
+            (item) => (
               <div key={item.id} className="card mb-0">
                 <div className="card-body p-3">
                   <small className="float-end text-muted">{item.date}</small>

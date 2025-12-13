@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import datas from "./datas";
 import { Link } from "react-router-dom";
 function Search() {
@@ -20,8 +20,8 @@ function Search() {
             <input
               name="search"
               onChange={setSearch}
-              onFocus={(e) => setDropdown(true)}
-              onBlur={(e) =>
+              onFocus={() => setDropdown(true)}
+              onBlur={() =>
                 setTimeout(() => {
                   setDropdown(false);
                 }, 500)

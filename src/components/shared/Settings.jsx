@@ -2,7 +2,7 @@ function Settings() {
   function toggleSettings() {
     document.body.classList.toggle("end-bar-enabled");
   }
-  function darkLight() {}
+  // const [darkLight, setDarkLight] = useState("dark");
   return (
     <>
       <div className="end-bar">
@@ -25,7 +25,6 @@ function Settings() {
               <div className="simplebar-offset" style={{ right: 0, bottom: 0 }}>
                 <div
                   className="simplebar-content-wrapper"
-                  tabIndex={0}
                   role="region"
                   aria-label="scrollable content"
                   style={{ height: "100%", overflow: "hidden scroll" }}

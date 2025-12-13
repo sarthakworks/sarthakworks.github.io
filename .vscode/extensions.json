@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "SonarSource.sonarlint-vscode",
+    "redhat.vscode-xml"
+  ]
+}

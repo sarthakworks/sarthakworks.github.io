@@ -1,28 +1,26 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function Api() {
-  let url = "https://reqres.in/api/users?page=2";
-
   const [user, setuser] = useState([]);
 
-  let getUser = async () => {
-    await fetch(url)
-      .then((i) => i.json())
-      .then((res) =>
-        setuser(
-          res.data.sort((a, b) =>
-            a.last_first_name > b.first_name
-              ? 1
-              : b.first_name > a.first_name
-              ? -1
-              : 0
+  useEffect(() => {
+    let url = "https://reqres.in/api/users?page=2";
+    let getUser = async () => {
+      await fetch(url)
+        .then((i) => i.json())
+        .then((res) =>
+          setuser(
+            res.data.sort((a, b) =>
+              a.last_first_name > b.first_name
+                ? 1
+                : b.first_name > a.first_name
+                ? -1
+                : 0
+            )
           )
         )
-      )
-      .catch((err) => console.log(err));
-  };
-
-  useEffect(() => {
+        .catch((err) => console.log(err));
+    };
     getUser();
   }, []);
   return (

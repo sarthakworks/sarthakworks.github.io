@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Card from "../shared/Card";
 import Api from "./projects/Api";
@@ -11,7 +10,6 @@ import Stopwatch from "./projects/Stopwatch";
 import Todo from "./projects/Todo";
 function Random() {
   const half = "col-lg-6";
-  const full = "col-lg-12";
   return (
     <>
       {" "}

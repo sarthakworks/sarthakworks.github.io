@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./css/Slideshow.css";
 const colors = ["#727cf5", "#0acf97", "#fa5c7c"];
 
 function Slideshow() {
   const [index, setIndex] = useState(0);
-  let timer;
   useEffect(() => {
-    timer = setTimeout(() => setIndex(index === 2 ? 0 : index + 1), 2000);
+    const timer = setTimeout(() => setIndex(index === 2 ? 0 : index + 1), 2000);
     return () => clearTimeout(timer);
   }, [index]);
 
@@ -28,6 +27,13 @@ function Slideshow() {
             className={`dot ${index === idx && "active"}`}
             onClick={() => {
               setIndex(idx);
+            }}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                setIndex(idx);
+              }
             }}
           ></div>
         ))}

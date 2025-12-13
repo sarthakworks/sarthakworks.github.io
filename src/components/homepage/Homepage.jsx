@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/img-redundant-alt */
+ 
 import { Link } from "react-router-dom";
 import Right from "./Right";
 import Left from "./Left";

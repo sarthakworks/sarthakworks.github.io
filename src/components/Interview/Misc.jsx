@@ -1,4 +1,3 @@
-import { Outlet } from "react-router-dom";
 import Card from "../shared/Card";
 function Misc() {
   const half = "col-lg-6";
@@ -279,8 +278,8 @@ function Misc() {
                 'offline capabilities' in applications.
               </p>
               <p className="text-primary">
-                You can see service-worker.js in the tab Devtools> Application>
-                Service Worker:
+                You can see service-worker.js in the tab Devtools&gt;
+                Application&gt; Service Worker:
               </p>
               <div className="row">
                 <div className="col-6">

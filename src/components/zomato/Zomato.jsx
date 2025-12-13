@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import InitialPage from "./Initialpage";
 import Spinner from "./Spinner";
 import SearchResult from "./SearchResult";
 // import { data } from "jquery";
-
-/* eslint-disable jsx-a11y/alt-text */
 
 const cities = {
   Delhi: 1,
