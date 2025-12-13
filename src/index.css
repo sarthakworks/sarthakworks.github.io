@@ -1,0 +1,79 @@
+@import "./components/assets/css/app.min.css";
+@import "./components/assets/css/icons.min.css";
+@import "./components/assets/css/vendor/jquery-jvectormap-1.2.2.css";
+
+.object-fit {
+  object-fit: contain;
+}
+
+.tasks {
+  width: 17rem;
+}
+
+@media (min-width: 576px) {
+  .dropdown-md {
+    width: 240px;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  /* Light grey */
+  border-top: 16px solid var(--ct-progress-bar-bg);
+  /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.multi-ellipsis {
+  display: -webkit-box;
+  max-width: 200px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.flex-space-evenly {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.img-fit {
+  width: 100%;
+  border-radius: 2%;
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
