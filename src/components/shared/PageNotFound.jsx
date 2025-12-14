@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import fileSearchingSvg from '../assets/images/file-searching.svg';
 function PageNotFound() {
   return (
     <div className="content">
@@ -28,7 +29,7 @@ function PageNotFound() {
           <div className="col-lg-4">
             <div className="text-center">
               <img
-                src="/assets/images/file-searching.svg"
+                src={fileSearchingSvg}
                 height={90}
                 alt="File not found "
               />

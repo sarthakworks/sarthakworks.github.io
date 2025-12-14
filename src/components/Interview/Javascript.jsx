@@ -1,4 +1,9 @@
 import Card from "../shared/Card";
+import codeJsSymbolPng from '../assets/images/code/js/symbol.png';
+import codeJsProtoPng from '../assets/images/code/js/proto.png';
+import codeJsPromise1Png from '../assets/images/code/js/promise1.png';
+import codeJsPromise2Png from '../assets/images/code/js/promise2.png';
+import codeJsAsyncawaitPng from '../assets/images/code/js/asyncawait.png';
 
 function Javascript() {
   const half = "col-lg-6";
@@ -141,7 +146,7 @@ function Javascript() {
                       className="col-6 img-fit"
                       alt="infinite curring"
                       width="100"
-                      src="/assets/images/code/js/symbol.png"
+                      src={codeJsSymbolPng}
                     />
                   </div>
                 </div>
@@ -375,7 +380,7 @@ function Javascript() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/js/proto.png"
+                src={codeJsProtoPng}
               />
             </Card>{" "}
             <Card width={half} title="ES6 Features">
@@ -433,14 +438,14 @@ function Javascript() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/js/promise1.png"
+                src={codeJsPromise1Png}
               />
               <h5>Fetching api using then()</h5>
               <img
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/js/promise2.png"
+                src={codeJsPromise2Png}
               />
             </Card>{" "}
             <Card width={half} title="Async / Await">
@@ -460,7 +465,7 @@ function Javascript() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/js/asyncawait.png"
+                src={codeJsAsyncawaitPng}
               />
             </Card>{" "}
             <Card width={half} title="Arrow Functions">

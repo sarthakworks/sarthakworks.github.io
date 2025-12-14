@@ -1,4 +1,11 @@
 import Card from "../shared/Card";
+import codeReactErrorPng from "../assets/images/code/react/error.png";
+import codeReactError2Png from "../assets/images/code/react/error2.png";
+import codeReactReduxstorePng from "../assets/images/code/react/reduxStore.png";
+import codeReactReduxappPng from "../assets/images/code/react/reduxApp.png";
+import codeReactReduxcomponentPng from "../assets/images/code/react/reduxComponent.png";
+import codeReactTypeDefaultPng from "../assets/images/code/react/type_default.png";
+import codeReactLazyPng from "../assets/images/code/react/lazy.png";
 
 function React() {
   const half = "col-lg-6";
@@ -204,7 +211,7 @@ function React() {
                     className="img-fit"
                     alt="infinite curring"
                     width="100"
-                    src="/assets/images/code/react/error.png"
+                    src={codeReactErrorPng}
                   />
                 </div>
                 <div className="col-6">
@@ -217,7 +224,7 @@ function React() {
                     className="img-fit"
                     alt="infinite curring"
                     width="100"
-                    src="/assets/images/code/react/error2.png"
+                    src={codeReactError2Png}
                   />
                 </div>
               </div>{" "}
@@ -235,7 +242,7 @@ function React() {
                         className="img-fit"
                         alt="infinite curring"
                         width="100"
-                        src="/assets/images/code/react/reduxStore.png"
+                        src={codeReactReduxstorePng}
                       />
                     </li>
                     <li>
@@ -246,7 +253,7 @@ function React() {
                         className="img-fit"
                         alt="infinite curring"
                         width="100"
-                        src="/assets/images/code/react/reduxApp.png"
+                        src={codeReactReduxappPng}
                       />
                     </li>
                   </ul>
@@ -254,20 +261,18 @@ function React() {
                 <div className="col-6">
                   <ul>
                     <li>
-                      <li>
-                        <h5 className="text-primary">
-                          in component use useSelector hook to acces the state
-                        </h5>{" "}
-                        <h5 className="text-primary">
-                          useDispatch is used to dispatch Action with payload
-                        </h5>
-                        <img
-                          className="img-fit"
-                          alt="infinite curring"
-                          width="100"
-                          src="/assets/images/code/react/reduxComponent.png"
-                        />
-                      </li>
+                      <h5 className="text-primary">
+                        in component use useSelector hook to acces the state
+                      </h5>{" "}
+                      <h5 className="text-primary">
+                        useDispatch is used to dispatch Action with payload
+                      </h5>
+                      <img
+                        className="img-fit"
+                        alt="infinite curring"
+                        width="100"
+                        src={codeReactReduxcomponentPng}
+                      />
                     </li>
                   </ul>
                 </div>
@@ -449,7 +454,7 @@ function React() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/react/type_default.png"
+                src={codeReactTypeDefaultPng}
               />
             </Card>
             <Card width={full} title="Lazy Loading">
@@ -483,7 +488,7 @@ function React() {
                     className="img-fit"
                     alt="infinite curring"
                     width="100"
-                    src="/assets/images/code/react/lazy.png"
+                    src={codeReactLazyPng}
                   />
                 </ul>
               </div>

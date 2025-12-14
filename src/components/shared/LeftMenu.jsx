@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import usersAvatar2Png from '../assets/images/users/avatar-2.png';
 function LeftMenu() {
   return (
     <>
@@ -7,7 +8,7 @@ function LeftMenu() {
         <div className="leftbar-user">
           <Link to="/">
             <img
-              src="/assets/images/users/avatar-2.png"
+              src={usersAvatar2Png}
               alt="user"
               height={82}
               className="rounded-circle shadow-sm"

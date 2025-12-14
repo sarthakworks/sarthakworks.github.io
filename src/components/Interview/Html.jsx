@@ -1,4 +1,6 @@
 import Card from "../shared/Card";
+import codeCssGridPng from "../assets/images/code/css/grid.png";
+import codeCssScssPng from "../assets/images/code/css/scss.png";
 
 function Html() {
   const half = "col-lg-6";
@@ -174,7 +176,7 @@ function Html() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/css/grid.png"
+                src={codeCssGridPng}
               />
             </Card>
             <Card width={half} title="SASS /SCSS">
@@ -182,7 +184,7 @@ function Html() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/css/scss.png"
+                src={codeCssScssPng}
               />
             </Card>
             <Card width={half} title="Accessibility">
@@ -210,7 +212,7 @@ function Html() {
               </p>
             </Card>
             <Card width={half} title="Defer Async">
-              <p>
+              <div>
                 When the browser loads HTML and comes across a
                 <span className="text-muted">{"  <script>...</script> "}</span>
                 tag, it can't continue building the DOM. It must execute the
@@ -225,7 +227,7 @@ function Html() {
                     it make websit load slower as script is blocking page load
                   </li>
                 </ul>
-              </p>
+              </div>
               <h5 className="text-primary">Defer (better in most cases)</h5>
               <p>
                 with defer attribute browser donot wait for the script to load

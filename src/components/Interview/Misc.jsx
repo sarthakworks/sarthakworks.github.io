@@ -1,4 +1,9 @@
 import Card from "../shared/Card";
+import codeMiscBasicconfigPng from "../assets/images/code/misc/basicconfig.png";
+import codeMiscServiceworker1Png from "../assets/images/code/misc/serviceworker1.png";
+import codeMiscServiceworker2Png from "../assets/images/code/misc/serviceworker2.png";
+import codeMiscServiceworker3Png from "../assets/images/code/misc/serviceworker3.png";
+import codeMiscServiceworker4Png from "../assets/images/code/misc/serviceworker4.png";
 function Misc() {
   const half = "col-lg-6";
   const full = "col-lg-12";
@@ -220,7 +225,7 @@ function Misc() {
                   className="img-fit"
                   alt="infinite curring"
                   width="100"
-                  src="/assets/images/code/misc/basicconfig.png"
+                  src={codeMiscBasicconfigPng}
                 />
               </div>
             </Card>
@@ -288,7 +293,7 @@ function Misc() {
                     className="img-fit"
                     alt="infinite curring"
                     width="100"
-                    src="/assets/images/code/misc/serviceworker1.png"
+                    src={codeMiscServiceworker1Png}
                   />
                 </div>
                 <div className="col-6">
@@ -297,7 +302,7 @@ function Misc() {
                     className="img-fit"
                     alt="infinite curring"
                     width="100"
-                    src="/assets/images/code/misc/serviceworker2.png"
+                    src={codeMiscServiceworker2Png}
                   />
                 </div>
               </div>
@@ -308,7 +313,7 @@ function Misc() {
                     className="img-fit"
                     alt="infinite curring"
                     width="100"
-                    src="/assets/images/code/misc/serviceworker3.png"
+                    src={codeMiscServiceworker3Png}
                   />
                 </div>
                 <div className="col-6">
@@ -317,7 +322,7 @@ function Misc() {
                     className="img-fit"
                     alt="infinite curring"
                     width="100"
-                    src="/assets/images/code/misc/serviceworker4.png"
+                    src={codeMiscServiceworker4Png}
                   />
                 </div>
               </div>

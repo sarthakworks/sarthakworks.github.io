@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 import AWS from "../assets/downloads/AWS.pdf";
+import awsPng from "../assets/images/aws.png";
+import img2048Jpg from "../assets/images/2048.jpg";
+import darkPng from "../assets/images/dark.png";
+import tictactoePng from "../assets/images/tictactoe.png";
 function Left() {
   const GAME = "https://sarthakworks.github.io/2048/";
   const EXTENSION =
@@ -49,7 +53,7 @@ function Left() {
               <div className="row align-items-center">
                 <div className="col-auto">
                   <img
-                    src="/assets/images/aws.png"
+                    src={awsPng}
                     className="avatar-sm rounded object-fit"
                     alt="file-"
                   />
@@ -90,7 +94,7 @@ function Left() {
               <div className="row align-items-center">
                 <div className="col-auto">
                   <img
-                    src="/assets/images/2048.jpg"
+                    src={img2048Jpg}
                     className="avatar-sm rounded object-fit"
                     alt="file-"
                   />
@@ -125,7 +129,7 @@ function Left() {
               <div className="row align-items-center">
                 <div className="col-auto">
                   <img
-                    src="/assets/images/dark.png"
+                    src={darkPng}
                     className="avatar-sm rounded object-fit"
                     alt="file-"
                   />
@@ -164,7 +168,7 @@ function Left() {
               <div className="row align-items-center">
                 <div className="col-auto">
                   <img
-                    src="/assets/images/tictactoe.png"
+                    src={tictactoePng}
                     className="avatar-sm rounded object-fit"
                     alt="file-"
                   />

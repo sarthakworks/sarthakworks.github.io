@@ -1,4 +1,30 @@
 import Card from "../shared/Card";
+import codeInfinitecurryingPng from '../assets/images/code/infinitecurrying.png';
+import codeSumPng from '../assets/images/code/sum.png';
+import codeGenericmemoPng from '../assets/images/code/genericMemo.png';
+import codeFibPng from '../assets/images/code/fib.png';
+import codeFactorialPng from '../assets/images/code/factorial.png';
+import codePalindromePng from '../assets/images/code/palindrome.png';
+import codeAnagramPng from '../assets/images/code/Anagram.png';
+import codeReversePng from '../assets/images/code/reverse.png';
+import codeSortingarrayPng from '../assets/images/code/sortingArray.png';
+import codeSearchPng from '../assets/images/code/search.png';
+import codeBindpolyPng from '../assets/images/code/bindpoly.png';
+import codeFilterpolyPng from '../assets/images/code/filterpoly.png';
+import codeReversepolyPng from '../assets/images/code/reversepoly.png';
+import codeFlatpolyPng from '../assets/images/code/flatpoly.png';
+import codePromisallpoly1Png from '../assets/images/code/promisallpoly1.png';
+import codePromisallpoly2Png from '../assets/images/code/promisallpoly2.png';
+import codePrintnamesortagePng from '../assets/images/code/PrintNameSortAge.png';
+import codeRemoveduplicatePng from '../assets/images/code/removeduplicate.png';
+import codeRangecreatorPng from '../assets/images/code/rangecreator.png';
+import codeShufflePng from '../assets/images/code/shuffle.png';
+import codeFindingvowelsPng from '../assets/images/code/findingvowels.png';
+import codeCapitalPng from '../assets/images/code/capital.png';
+import codePanagramPng from '../assets/images/code/panagram.png';
+import codeMaxfrequencyPng from '../assets/images/code/Maxfrequency.png';
+import codeTwosumPng from '../assets/images/code/twosum.png';
+import codeTablePng from '../assets/images/code/table.png';
 
 function Coding() {
   const half = "col-lg-6";
@@ -13,7 +39,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/infinitecurrying.png"
+                src={codeInfinitecurryingPng}
               />
             </Card>
             <Card width={half} title="Sum Memoization">
@@ -21,7 +47,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/sum.png"
+                src={codeSumPng}
               />
             </Card>
             <Card width={half} title="Generic Memoization">
@@ -29,7 +55,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/genericMemo.png"
+                src={codeGenericmemoPng}
               />
             </Card>
             <Card width={half} title="Fibonacci Memoization">
@@ -37,7 +63,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/fib.png"
+                src={codeFibPng}
               />
             </Card>
             <Card width={half} title="factorial Memoization">
@@ -45,7 +71,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/factorial.png"
+                src={codeFactorialPng}
               />
             </Card>
             <Card width={half} title="Palindrome">
@@ -53,7 +79,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/palindrome.png"
+                src={codePalindromePng}
               />
             </Card>
             <Card width={half} title="Anagram">
@@ -61,7 +87,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/Anagram.png"
+                src={codeAnagramPng}
               />
             </Card>
             <Card width={half} title="Reverse a string">
@@ -69,7 +95,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/reverse.png"
+                src={codeReversePng}
               />
             </Card>
             <Card width={half} title="Sorting a Array">
@@ -77,7 +103,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/sortingArray.png"
+                src={codeSortingarrayPng}
               />
             </Card>
             <Card width={full} title="Search List Javascript">
@@ -85,7 +111,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/search.png"
+                src={codeSearchPng}
               />
             </Card>
             <Card width={full} title="Pollyfils">
@@ -96,7 +122,7 @@ function Coding() {
                     className="img-fit"
                     alt="infinite curring"
                     width="100"
-                    src="/assets/images/code/bindpoly.png"
+                    src={codeBindpolyPng}
                   />
                 </div>
                 <div className="col-6">
@@ -105,7 +131,7 @@ function Coding() {
                     className="img-fit"
                     alt="infinite curring"
                     width="100"
-                    src="/assets/images/code/filterpoly.png"
+                    src={codeFilterpolyPng}
                   />
                 </div>
                 <div className="col-6">
@@ -114,7 +140,7 @@ function Coding() {
                     className="img-fit"
                     alt="infinite curring"
                     width="100"
-                    src="/assets/images/code/reversepoly.png"
+                    src={codeReversepolyPng}
                   />
                 </div>
                 <div className="col-6">
@@ -123,7 +149,7 @@ function Coding() {
                     className="img-fit "
                     alt="infinite curring"
                     width="100"
-                    src="/assets/images/code/flatpoly.png"
+                    src={codeFlatpolyPng}
                   />
                 </div>
                 <div className="col-12">
@@ -136,7 +162,7 @@ function Coding() {
                         className="img-fit "
                         alt="infinite curring"
                         width="100"
-                        src="/assets/images/code/promisallpoly1.png"
+                        src={codePromisallpoly1Png}
                       />
                     </div>
                     <div className="col-6">
@@ -147,7 +173,7 @@ function Coding() {
                         className="img-fit "
                         alt="infinite curring"
                         width="100"
-                        src="/assets/images/code/promisallpoly2.png"
+                        src={codePromisallpoly2Png}
                       />
                     </div>
                   </div>
@@ -162,7 +188,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/PrintNameSortAge.png"
+                src={codePrintnamesortagePng}
               />
             </Card>
             <Card width={half} title="Remove Duplicate from array">
@@ -170,7 +196,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/removeduplicate.png"
+                src={codeRemoveduplicatePng}
               />
             </Card>
             <Card width={half} title="Range Creator">
@@ -178,7 +204,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/rangecreator.png"
+                src={codeRangecreatorPng}
               />
             </Card>
             <Card width={half} title="Shuffle Array Randomly">
@@ -186,7 +212,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/shuffle.png"
+                src={codeShufflePng}
               />
             </Card>
             <Card width={half} title="Finding Number of vowels in string">
@@ -194,7 +220,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/findingvowels.png"
+                src={codeFindingvowelsPng}
               />
             </Card>
             <Card width={half} title="Captalize a string">
@@ -202,7 +228,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/capital.png"
+                src={codeCapitalPng}
               />
             </Card>
             <Card width={half} title="Panagram">
@@ -210,7 +236,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/panagram.png"
+                src={codePanagramPng}
               />
             </Card>
             <Card
@@ -222,7 +248,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/Maxfrequency.png"
+                src={codeMaxfrequencyPng}
               />
             </Card>
             <Card
@@ -233,7 +259,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/twosum.png"
+                src={codeTwosumPng}
               />
             </Card>
             <Card width={half} title="Dynamic table creation with Dom api">
@@ -241,7 +267,7 @@ function Coding() {
                 className="img-fit"
                 alt="infinite curring"
                 width="100"
-                src="/assets/images/code/table.png"
+                src={codeTablePng}
               />
             </Card>
             <Card width={full} title="Output Based javascript question">

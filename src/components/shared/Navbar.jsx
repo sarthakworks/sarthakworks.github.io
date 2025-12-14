@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Search from "../search/Search";
+import logoPng from '../assets/images/logo.png';
+import logoSmPng from '../assets/images/logo_sm.png';
+import brandsLinkedinPng from '../assets/images/brands/linkedin.png';
+import brandsGithubPng from '../assets/images/brands/github.png';
+import brandsDropboxPng from '../assets/images/brands/dropbox.png';
+import brandsGSuitePng from '../assets/images/brands/g-suite.png';
+import usersAvatar2Png from '../assets/images/users/avatar-2.png';
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   // const [isSettingOpen, setisSettingOpen] = useState(true);
@@ -24,13 +31,13 @@ function Navbar() {
           <Link to="/" className="topnav-logo">
             <span className="topnav-logo-lg">
               <img
-                src="/assets/images/logo.png"
+                src={logoPng}
                 alt="sarthak logo"
                 height={45}
               />
             </span>
             <span className="topnav-logo-sm">
-              <img src="/assets/images/logo_sm.png" alt="das" height={16} />
+              <img src={logoSmPng} alt="das" height={16} />
             </span>
           </Link>
 
@@ -118,7 +125,7 @@ function Navbar() {
                         rel="noreferrer"
                       >
                         <img
-                          src="/assets/images/brands/linkedin.png"
+                          src={brandsLinkedinPng}
                           alt="linkedin"
                         />
                         <span>Linkedin</span>
@@ -132,7 +139,7 @@ function Navbar() {
                         rel="noreferrer"
                       >
                         <img
-                          src="/assets/images/brands/github.png"
+                          src={brandsGithubPng}
                           alt="Github"
                         />
                         <span>GitHub</span>
@@ -143,7 +150,7 @@ function Navbar() {
                     <div className="col">
                       <a className="dropdown-icon-item" href="/">
                         <img
-                          src="/assets/images/brands/dropbox.png"
+                          src={brandsDropboxPng}
                           alt="dropbox"
                         />
                         <span>Dropbox</span>
@@ -155,7 +162,7 @@ function Navbar() {
                         href="mailto:sarthak.workplace@gmail.com"
                       >
                         <img
-                          src="/assets/images/brands/g-suite.png"
+                          src={brandsGSuitePng}
                           alt="G Suite"
                         />
                         <span>Mail</span>
@@ -186,7 +193,7 @@ function Navbar() {
               >
                 <span className="account-user-avatar">
                   <img
-                    src="/assets/images/users/avatar-2.png"
+                    src={usersAvatar2Png}
                     alt="user"
                     className="rounded-circle"
                   />
