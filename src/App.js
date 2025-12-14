@@ -6,8 +6,6 @@ import LeftMenu from './components/shared/LeftMenu'
 import Zomato from './components/zomato/Zomato'
 import Navbar from './components/shared/Navbar'
 import Settings from './components/shared/Settings'
-import KanbanHome from './components/Kanban/KanbanHome'
-// import Javascript from './components/Interview/Javascript'
 import Interview from './components/Interview/Interview'
 import Javascript from './components/Interview/Javascript'
 import Html from './components/Interview/Html'
@@ -35,9 +33,6 @@ function App() {
                 element={
                   <Zomato />}></Route>
               <Route
-                path="/Kanban"
-                element={<KanbanHome />}
-              /><Route
                 path="/Random"
                 element={<Random />}
               />
