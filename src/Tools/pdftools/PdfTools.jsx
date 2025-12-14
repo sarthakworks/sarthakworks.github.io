@@ -1,36 +1,45 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 
-function ImageTools({ embedded = false }) {
+function PdfTools({ embedded = false }) {
   const location = useLocation();
   const isDashboard =
     embedded ||
-    location.pathname === "/image-tools" ||
-    location.pathname === "/image-tools/";
+    location.pathname === "/pdf-tools" ||
+    location.pathname === "/pdf-tools/";
 
   const tools = [
     {
-      name: "Image to Base64",
-      path: "/image-tools/base64",
-      icon: "mdi mdi-code-braces",
-      desc: "Convert images to Base64 strings instantly.",
+      name: "Merge PDF",
+      path: "/pdf-tools/merge",
+      icon: "mdi mdi-file-document-multiple-outline",
+      desc: "Combine multiple PDF files into one single document.",
       color: "primary",
       bg: "bg-primary-lighten",
       text: "text-primary",
     },
     {
-      name: "Compress IMAGE",
-      path: "/image-tools/compress",
-      icon: "uil-compress-arrows",
-      desc: "Compress JPG, PNG, SVG, and GIFs while saving space and maintaining quality.",
+      name: "Split PDF",
+      path: "/pdf-tools/split",
+      icon: "uil-minus-path",
+      desc: "Separate one PDF into individual pages or distinct files.",
+      color: "danger",
+      bg: "bg-danger-lighten",
+      text: "text-danger",
+    },
+    {
+      name: "PDF to Image",
+      path: "/pdf-tools/to-image",
+      icon: "mdi mdi-file-image-outline",
+      desc: "Convert PDF pages into high-quality JPG or PNG images.",
       color: "success",
       bg: "bg-success-lighten",
       text: "text-success",
     },
     {
-      name: "Blur Sensitive Info",
-      path: "/image-tools/blur",
-      icon: "mdi mdi-blur",
-      desc: "Pixelate or blur specific regions of an image to hide sensitive data.",
+      name: "Unlock PDF",
+      path: "/pdf-tools/unlock",
+      icon: "uil-unlock-alt",
+      desc: "Remove password protection from PDF files.",
       color: "warning",
       bg: "bg-warning-lighten",
       text: "text-warning",
@@ -45,7 +54,7 @@ function ImageTools({ embedded = false }) {
           <div className="row">
             <div className="col-12">
               <div className="page-title-box">
-                <h4 className="page-title">Image Tools</h4>
+                <h4 className="page-title">PDF Tools</h4>
               </div>
             </div>
           </div>
@@ -96,4 +105,4 @@ function ImageTools({ embedded = false }) {
   );
 }
 
-export default ImageTools;
+export default PdfTools;

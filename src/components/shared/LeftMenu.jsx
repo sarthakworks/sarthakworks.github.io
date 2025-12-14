@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
-import usersAvatar2Png from '../assets/images/users/avatar-2.png';
+import usersAvatar2Png from "../assets/images/users/avatar-2.png";
 function LeftMenu() {
   return (
     <>
-      <div className=" leftside-menu leftside-menu-detached show">
+      <div className="card leftside-menu leftside-menu-detached show">
         {/* LOGO */}
         <div className="leftbar-user">
           <Link to="/">
             <img
               src={usersAvatar2Png}
               alt="user"
-              height={82}
+              height={150}
               className="rounded-circle shadow-sm"
             />
             <span className="leftbar-user-name">Sarthak Bansal</span>
@@ -28,9 +28,15 @@ function LeftMenu() {
             </Link>
           </li>
           <li className="side-nav-item">
-            <Link to="error" className="side-nav-link">
-              <i className="uil-shield-exclamation" />
-              <span> Error Page </span>
+            <Link to="/pdf-tools" className="side-nav-link">
+              <i className="uil-file-alt" />
+              <span> PDF Tools </span>
+            </Link>
+          </li>
+          <li className="side-nav-item">
+            <Link to="/aes-tool" className="side-nav-link">
+              <i className="uil-padlock" />
+              <span> AES Encryption </span>
             </Link>
           </li>
         </ul>

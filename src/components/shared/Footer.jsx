@@ -5,14 +5,16 @@ function Footer() {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-6">
-            <script>document.write(new Date().getFullYear())</script>
-            Made with <span style={{ color: "red" }}>❤</span> by Sarthak
+            <i className="uil-copyright"></i> {new Date().getFullYear()}
           </div>
           <div className="col-md-6">
             <div className="text-md-end footer-links d-none d-md-block">
-              <Link to="/">About</Link>
-              <Link to="/">Support</Link>
-              <Link to="/">Contact Us</Link>
+              <Link to="/Interview">Content</Link>
+              <Link to="/Random">Mini Projects</Link>
+              <Link to="/">
+                {" "}
+                Made with <span style={{ color: "red" }}>❤</span> by Sarthak
+              </Link>
             </div>
           </div>
         </div>

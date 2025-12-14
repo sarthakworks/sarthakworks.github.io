@@ -39,9 +39,7 @@
 
 .loader {
   border: 16px solid #f3f3f3;
-  /* Light grey */
   border-top: 16px solid var(--ct-progress-bar-bg);
-  /* Blue */
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -87,4 +85,42 @@ iframe {
 
 .no-wrap {
   white-space: nowrap;
+}
+
+.setting-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: var(--ct-primary);
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.setting-toggle-btn:hover {
+  transform: rotate(90deg);
+  color: #fff;
+}
+
+
+.topnav-navbar {
+  position: fixed;
+}
+
+.leftside-menu {
+  position: fixed !important;
+  overflow-y: auto;
+  z-index: 10;
+  height: calc(100% - 60px);
+}
+
+.content-page {
+  margin-left: 260px !important;
 }

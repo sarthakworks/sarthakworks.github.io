@@ -4,6 +4,11 @@ import awsPng from "../assets/images/aws.png";
 import img2048Jpg from "../assets/images/2048.jpg";
 import darkPng from "../assets/images/dark.png";
 import tictactoePng from "../assets/images/tictactoe.png";
+import brandsLinkedinSvg from "../assets/images/brands/linkedin.svg";
+import brandsGithubSvg from "../assets/images/brands/github.svg";
+import brandsGravatarSvg from "../assets/images/brands/gravatar.svg";
+import brandsGSuiteSvg from "../assets/images/brands/gmail.svg";
+
 function Left() {
   const GAME = "https://sarthakworks.github.io/2048/";
   const EXTENSION =
@@ -14,40 +19,149 @@ function Left() {
     <>
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title mb-3">Files</h5>
-          {/* <div className="card mb-1 shadow-none border">
+          <h5 className="card-title mb-3">Social contacts</h5>
+          {/* LinkedIn */}
+          <div className="card mb-1 shadow-none border">
             <div className="p-2">
               <div className="row align-items-center">
                 <div className="col-auto">
-                  <div className="avatar-sm">
-                    <span className="avatar-title rounded">.PDF</span>
-                  </div>
+                  <img
+                    src={brandsLinkedinSvg}
+                    className="avatar-sm rounded object-fit"
+                    alt="linkedin"
+                  />
                 </div>
                 <div className="col ps-0">
-                  <Link
-                    to={Resume}
+                  <a
+                    href="https://www.linkedin.com/in/sarthakworks/"
                     target="_blank"
-                    download
+                    rel="noreferrer"
                     className="text-muted fw-bold"
                   >
-                    Resume
-                  </Link>
-                  <p className="mb-0">2.3 MB</p>
+                    LinkedIn
+                  </a>
+                  <p className="mb-0">Profile</p>
                 </div>
-               <div className="col-auto">
-                  {/* Button 
-                  <Link
-                    to={Resume}
+                <div className="col-auto">
+                  <a
+                    href="https://www.linkedin.com/in/sarthakworks/"
                     target="_blank"
-                    download
+                    rel="noreferrer"
                     className="btn btn-link btn-lg text-muted"
                   >
-                    <i className="dripicons-download" />
-                  </Link>
+                    <i className="uil uil-external-link-alt"></i>
+                  </a>
                 </div>
               </div>
             </div>
-          </div>*/}
+          </div>
+          {/* GitHub */}
+          <div className="card mb-1 shadow-none border">
+            <div className="p-2">
+              <div className="row align-items-center">
+                <div className="col-auto">
+                  <img
+                    src={brandsGithubSvg}
+                    className="avatar-sm rounded object-fit"
+                    alt="github"
+                  />
+                </div>
+                <div className="col ps-0">
+                  <a
+                    href="https://github.com/sarthakworks"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-muted fw-bold"
+                  >
+                    GitHub
+                  </a>
+                  <p className="mb-0">Repositories</p>
+                </div>
+                <div className="col-auto">
+                  <a
+                    href="https://github.com/sarthakworks"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-link btn-lg text-muted"
+                  >
+                    <i className="uil uil-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Mail */}
+          <div className="card mb-1 shadow-none border">
+            <div className="p-2">
+              <div className="row align-items-center">
+                <div className="col-auto">
+                  <img
+                    src={brandsGSuiteSvg}
+                    className="avatar-sm rounded object-fit"
+                    alt="mail"
+                  />
+                </div>
+                <div className="col ps-0">
+                  <a
+                    href="mailto:sarthak.workplace@gmail.com"
+                    className="text-muted fw-bold"
+                  >
+                    Mail
+                  </a>
+                  <p className="mb-0">Contact</p>
+                </div>
+                <div className="col-auto">
+                  <a
+                    href="mailto:sarthak.workplace@gmail.com"
+                    className="btn btn-link btn-lg text-muted"
+                  >
+                    <i className="uil uil-envelope-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Gravatar */}
+          <div className="card mb-1 shadow-none border">
+            <div className="p-2">
+              <div className="row align-items-center">
+                <div className="col-auto">
+                  <img
+                    src={brandsGravatarSvg}
+                    className="avatar-sm rounded object-fit"
+                    alt="gravatar"
+                  />
+                </div>
+                <div className="col ps-0">
+                  <a
+                    href="https://gravatar.com/mentalitycrispy17a40cf071"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-muted fw-bold"
+                  >
+                    Gravatar
+                  </a>
+                  <p className="mb-0">Profile</p>
+                </div>
+                <div className="col-auto">
+                  <a
+                    href="https://gravatar.com/mentalitycrispy17a40cf071"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-link btn-lg text-muted"
+                  >
+                    <i className="uil uil-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-body">
+          <h5 className="card-title mb-3">Files</h5>
           <div className="card mb-1 shadow-none border">
             <div className="p-2">
               <div className="row align-items-center">
@@ -88,7 +202,7 @@ function Left() {
 
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title mb-3">Projects</h5>
+          <h5 className="card-title mb-3">Fun things</h5>
           <div className="card mb-1 shadow-none border">
             <div className="p-2">
               <div className="row align-items-center">
