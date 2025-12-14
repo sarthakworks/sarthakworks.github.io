@@ -23,7 +23,7 @@ function LeftMenu() {
           <li className="side-nav-item">
             <Link to="zomato" className="side-nav-link">
               <i className="uil-restaurant" />
-              <span> Zomato </span>
+              <span> Json </span>
             </Link>
           </li>
           <li className="side-nav-item">
