@@ -2,6 +2,11 @@
 @import "./components/assets/css/icons.min.css";
 @import "./components/assets/css/vendor/jquery-jvectormap-1.2.2.css";
 
+.gutter {
+  margin: auto;
+  max-width: 1640px !important;
+}
+
 .object-fit {
   object-fit: contain;
 }
@@ -26,6 +31,7 @@
 .tool-card {
   transition: all 0.1s ease-in-out;
   cursor: pointer;
+  min-width: 250px;
 }
 
 .tool-card:hover {

@@ -6,10 +6,10 @@ function Homepage() {
     <div className="content">
       <div className="container-fluid mt-4">
         <div className="row">
-          <div className="col-xxl-8 col-lg-6">
+          <div className="col-sm-12 col-xxl-8">
             <Right />
           </div>
-          <div className="col-lg-6 col-xxl-4">
+          <div className="col-sm-12 col-xxl-4">
             <Left />
           </div>
         </div>

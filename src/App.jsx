@@ -28,7 +28,7 @@ function App() {
   return (
     <BrowserRouter>
       <SettingToggle />
-      <div className="container-fluid">
+      <div className="container-fluid gutter">
         <div className="wrapper menuitem-active">
           <LeftMenu />
           <div className="content-page px-0">

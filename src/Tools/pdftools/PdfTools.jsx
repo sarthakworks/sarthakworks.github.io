@@ -63,7 +63,9 @@ function PdfTools({ embedded = false }) {
             {tools.map((tool) => (
               <div
                 className={
-                  embedded ? "col-sm-6 col-lg-4 mb-4" : "col-sm-6 col-lg-3"
+                  embedded
+                    ? "col-sm-12 col-lg-6 mb-4"
+                    : "col-sm-12 col-lg-6 col-md-6 mb-4"
                 }
                 key={tool.path}
               >
