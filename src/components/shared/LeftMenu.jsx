@@ -21,9 +21,9 @@ function LeftMenu() {
           <li className="side-nav-title side-nav-item">Apps</li>
 
           <li className="side-nav-item">
-            <Link to="zomato" className="side-nav-link">
-              <i className="uil-restaurant" />
-              <span> Json </span>
+            <Link to="/image-tools" className="side-nav-link">
+              <i className="uil-image-check" />
+              <span> Image Tools </span>
             </Link>
           </li>
           <li className="side-nav-item">

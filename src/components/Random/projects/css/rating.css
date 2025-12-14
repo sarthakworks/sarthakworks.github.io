@@ -1,8 +1,3 @@
-h1,
-p {
-  font-family: Lato;
-}
-
 .star::before {
   content: "\2606";
   font-size: 2em;

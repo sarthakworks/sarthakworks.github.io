@@ -1,19 +1,23 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Homepage from './components/homepage/Homepage'
-import Footer from './components/shared/Footer'
-import PageNotFound from './components/shared/PageNotFound'
-import LeftMenu from './components/shared/LeftMenu'
-import Zomato from './components/zomato/Zomato'
-import Navbar from './components/shared/Navbar'
-import Settings from './components/shared/Settings'
-import Interview from './components/Interview/Interview'
-import Javascript from './components/Interview/Javascript'
-import Html from './components/Interview/Html'
-import React from './components/Interview/React'
-import Coding from './components/Interview/Coding'
-import Misc from './components/Interview/Misc'
-import Random from './components/Random/Random'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Homepage from "./components/homepage/Homepage";
+import Footer from "./components/shared/Footer";
+import PageNotFound from "./components/shared/PageNotFound";
+import LeftMenu from "./components/shared/LeftMenu";
+import Navbar from "./components/shared/Navbar";
+import Settings from "./components/shared/Settings";
+import Interview from "./components/Interview/Interview";
+import Javascript from "./components/Interview/Javascript";
+import Html from "./components/Interview/Html";
+import React from "./components/Interview/React";
+import Coding from "./components/Interview/Coding";
+import Misc from "./components/Interview/Misc";
+import Random from "./components/Random/Random";
 // import Search from './components/search/Search'
+
+import ImageBase64 from "./Tools/imagetools/ImageBase64/ImageBase64";
+import CompressImage from "./Tools/imagetools/CompressImage/CompressImage";
+import ImageTools from "./Tools/imagetools/ImageTools";
+import BlurImage from "./Tools/imagetools/BlurImage/BlurImage";
 
 function App() {
   return (
@@ -24,22 +28,14 @@ function App() {
           <LeftMenu />
           <div className="content-page px-0">
             <Routes>
-              <Route
-                path='/'
-                element={
-                  <Homepage />}></Route>
-              <Route
-                path='/zomato'
-                element={
-                  <Zomato />}></Route>
-              <Route
-                path="/Random"
-                element={<Random />}
-              />
-              <Route
-                path="Interview"
-                element={<Interview />}
-              >
+              <Route path="/" element={<Homepage />}></Route>
+              <Route path="/image-tools" element={<ImageTools />}>
+                <Route path="base64" element={<ImageBase64 />} />
+                <Route path="compress" element={<CompressImage />} />
+                <Route path="blur" element={<BlurImage />} />
+              </Route>
+              <Route path="/Random" element={<Random />} />
+              <Route path="Interview" element={<Interview />}>
                 <Route path="" element={<Javascript />}></Route>
                 <Route path="javascript" element={<Javascript />}></Route>
                 <Route path="code" element={<Coding />}></Route>
@@ -48,16 +44,12 @@ function App() {
                 <Route path="Misc" element={<Misc />}></Route>
               </Route>
 
-
               {/* <Route
               path="/search"
               element={<Search />}
             /> */}
 
-              <Route
-                path="*"
-                element={<PageNotFound />}
-              />
+              <Route path="*" element={<PageNotFound />} />
             </Routes>
             <Footer />
           </div>
@@ -65,7 +57,7 @@ function App() {
       </div>
       <Settings />
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;
