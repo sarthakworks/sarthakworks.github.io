@@ -7,8 +7,13 @@ function Todo() {
   const [editText, setEditText] = useState(false);
 
   function addTask(e) {
-    if (e.key === "Enter" && !todo.includes(text)) {
+    if (
+      (e.key === "Enter" || e.type === "click") &&
+      text &&
+      !todo.includes(text)
+    ) {
       setTodo([...todo, text]);
+      setText("");
     }
   }
 
@@ -27,8 +32,9 @@ function Todo() {
         <input
           className="form-control"
           placeholder="type.."
+          value={text}
           onChange={(e) => setText(e.target.value)}
-          onKeyPress={addTask}
+          onKeyDown={addTask}
         />
         <button className="btn btn-primary" onClick={addTask}>
           Add

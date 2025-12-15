@@ -8,6 +8,7 @@ import Search from "./projects/Search";
 import Slideshow from "./projects/Slideshow";
 import Stopwatch from "./projects/Stopwatch";
 import Todo from "./projects/Todo";
+import Virtualisation from "./projects/Virtualisation";
 function Random() {
   const half = "col-lg-6";
   return (
@@ -56,7 +57,7 @@ function Random() {
                   <Main />
                 </Card>
                 <Card width={half} title="Virtualization">
-                  in progress
+                  <Virtualisation />
                 </Card>
                 <Card width={half} title="Rating stars">
                   <Rating />

@@ -1,63 +1,48 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+
+const initialTime = { h: 1, m: 1, s: 10 };
 
 function Stopwatch() {
-  const [ss, setss] = useState(10);
-  const [mm, setmm] = useState(1);
-  const [hh, sethh] = useState(1);
-  const timerRef = useRef(null);
+  const [time, setTime] = useState(initialTime);
+  const [isActive, setIsActive] = useState(false);
+
   useEffect(() => {
-    // Check for rollover
-    if (ss < 1) {
-      // eslint-disable-next-line
-      setss(60);
-      setmm((prev) => {
-        if (prev > 0) return prev - 1;
-        sethh((h) => (h > 0 ? h - 1 : 24));
-        return 60;
-      });
-    } else {
-      // Only set timer if we aren't rolling over immediately
-      // This logic relies on the component being "active".
-      // The original code was auto-starting?
-      // Original code: useEffect sets timeout blindly.
-      // We need to know if it's "running".
-      // But preserving original behavior: it seems it was always running?
-      // "pauseHandler" clears timeout. But next render (if triggered) would restart it?
-      // Only "startHandler" triggered state change?
-      // Actually the original code was: useEffect runs on every render.
-      // If I click pause, it clears timer. State doesn't change. No re-render. Timer stops.
-      // If I click start, it sets timeout. State changes. Re-render. UseEffect runs again.
-      // So I need to replicate "run on every render" for the `timer` logic, OR use a state `isRunning`.
-      // I'll stick to the "run on every render" pattern but add dependencies to satisfy linter?
-      // No, "run on every render" = no dependencies.
-      // Linter error was "Assignments to 'timer' variable...". I fixed that with useRef.
-      // Linter warning "setState inside effect".
+    let interval = null;
 
-      timerRef.current = setTimeout(() => {
-        setss((prev) => prev - 1);
+    if (isActive) {
+      interval = setInterval(() => {
+        if (time.s > 0) {
+          setTime({ ...time, s: time.s - 1 });
+        } else if (time.m > 0) {
+          setTime({ ...time, m: time.m - 1, s: 59 });
+        } else if (time.h > 0) {
+          setTime({ h: time.h - 1, m: 59, s: 59 });
+        } else {
+          setIsActive(false);
+        }
       }, 1000);
+    } else {
+      clearInterval(interval);
     }
-
-    return () => {
-      clearTimeout(timerRef.current);
-    };
-  }, [ss]); // valid dependency
+    return () => clearInterval(interval);
+  }, [isActive, time]);
 
   function resetHandler() {
-    setss(60);
-    setmm(60);
-    sethh(10);
+    setIsActive(false);
+    setTime(initialTime);
   }
+
   function startHandler() {
-    timerRef.current = setTimeout(() => setss(ss - 1), 1000);
+    setIsActive(true);
   }
+
   function pauseHandler() {
-    clearTimeout(timerRef.current);
+    setIsActive(false);
   }
   return (
     <>
       <p>
-        {hh}:{mm}:{ss}
+        {time.h}:{time.m}:{time.s}
       </p>
       <div className="button-list">
         <button className="btn btn-primary" onClick={startHandler}>
