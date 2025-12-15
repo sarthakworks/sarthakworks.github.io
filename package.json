@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "vite",
-    "build": "vite build",
+    "build": "vite build && cp dist/index.html dist/404.html",
     "preview": "vite preview",
     "server": "json-server --watch db.json --port 5000",
     "dev": "concurrently \"npm run server\" \"npm start\""
