@@ -1,0 +1,36 @@
+/* Sub-buttons (Theme toggle) */
+.setting-sub-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--ct-card-bg, #fff);
+    /* Fallback to white if var not set */
+    color: var(--ct-headings-color, #333);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-50px) scale(0.5);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10000;
+}
+
+.setting-sub-btn.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.setting-sub-btn:hover {
+    background-color: var(--ct-primary);
+    color: #fff;
+}
+
+.setting-sub-btn i {
+    font-size: 22px;
+    line-height: 1;
+}

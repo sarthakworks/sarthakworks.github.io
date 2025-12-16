@@ -1,0 +1,60 @@
+.setting-sub-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-end;
+    margin-top: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    min-width: 120px;
+    z-index: 10000;
+}
+
+.setting-sub-btn-group.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+    height: auto;
+    overflow: visible;
+    padding-bottom: 10px;
+    z-index: 10000;
+    align-items: center;
+}
+
+
+.lang-btn {
+    width: auto;
+    min-width: 90px;
+    height: 35px;
+    padding: 0 15px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 20px;
+    pointer-events: auto;
+    opacity: 1;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    background-color: var(--ct-card-bg, #fff);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+}
+
+
+
+.lang-btn.active,
+.lang-btn:hover {
+    background-color: var(--ct-primary) !important;
+    color: #fff !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.lang-btn:hover {
+    transform: translateX(-5px);
+}

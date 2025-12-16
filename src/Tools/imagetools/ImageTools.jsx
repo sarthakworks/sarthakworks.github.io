@@ -1,6 +1,8 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function ImageTools({ embedded = false }) {
+  const { t } = useTranslation();
   const location = useLocation();
   const isDashboard =
     embedded ||
@@ -9,28 +11,28 @@ function ImageTools({ embedded = false }) {
 
   const tools = [
     {
-      name: "Image to Base64",
+      name: t("image_to_base64"),
       path: "/image-tools/base64",
       icon: "mdi mdi-code-braces",
-      desc: "Convert images to Base64 strings instantly.",
+      desc: t("image_to_base64_desc"),
       color: "primary",
       bg: "bg-primary-lighten",
       text: "text-primary",
     },
     {
-      name: "Compress IMAGE",
+      name: t("compress_image"),
       path: "/image-tools/compress",
       icon: "uil-compress-arrows",
-      desc: "Compress JPG, PNG, SVG, and GIFs while saving space and maintaining quality.",
+      desc: t("compress_image_desc"),
       color: "success",
       bg: "bg-success-lighten",
       text: "text-success",
     },
     {
-      name: "Blur Sensitive Info",
+      name: t("blur_sensitive_info"),
       path: "/image-tools/blur",
       icon: "mdi mdi-blur",
-      desc: "Pixelate or blur specific regions of an image to hide sensitive data.",
+      desc: t("blur_sensitive_info_desc"),
       color: "warning",
       bg: "bg-warning-lighten",
       text: "text-warning",
@@ -45,7 +47,7 @@ function ImageTools({ embedded = false }) {
           <div className="row">
             <div className="col-12">
               <div className="page-title-box">
-                <h4 className="page-title">Image Tools</h4>
+                <h4 className="page-title">{t("image_tools")}</h4>
               </div>
             </div>
           </div>

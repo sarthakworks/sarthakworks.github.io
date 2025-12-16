@@ -1,6 +1,8 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function PdfTools({ embedded = false }) {
+  const { t } = useTranslation();
   const location = useLocation();
   const isDashboard =
     embedded ||
@@ -9,37 +11,37 @@ function PdfTools({ embedded = false }) {
 
   const tools = [
     {
-      name: "Merge PDF",
+      name: t("merge_pdf"),
       path: "/pdf-tools/merge",
       icon: "mdi mdi-file-document-multiple-outline",
-      desc: "Combine multiple PDF files into one single document.",
+      desc: t("merge_pdf_desc"),
       color: "primary",
       bg: "bg-primary-lighten",
       text: "text-primary",
     },
     {
-      name: "Split PDF",
+      name: t("split_pdf"),
       path: "/pdf-tools/split",
       icon: "uil-minus-path",
-      desc: "Separate one PDF into individual pages or distinct files.",
+      desc: t("split_pdf_desc"),
       color: "danger",
       bg: "bg-danger-lighten",
       text: "text-danger",
     },
     {
-      name: "PDF to Image",
+      name: t("pdf_to_image"),
       path: "/pdf-tools/to-image",
       icon: "mdi mdi-file-image-outline",
-      desc: "Convert PDF pages into high-quality JPG or PNG images.",
+      desc: t("pdf_to_image_desc"),
       color: "success",
       bg: "bg-success-lighten",
       text: "text-success",
     },
     {
-      name: "Unlock PDF",
+      name: t("unlock_pdf"),
       path: "/pdf-tools/unlock",
       icon: "uil-unlock-alt",
-      desc: "Remove password protection from PDF files.",
+      desc: t("unlock_pdf_desc"),
       color: "warning",
       bg: "bg-warning-lighten",
       text: "text-warning",
@@ -54,7 +56,7 @@ function PdfTools({ embedded = false }) {
           <div className="row">
             <div className="col-12">
               <div className="page-title-box">
-                <h4 className="page-title">PDF Tools</h4>
+                <h4 className="page-title">{t("pdf_tools")}</h4>
               </div>
             </div>
           </div>

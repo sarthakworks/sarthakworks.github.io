@@ -9,7 +9,10 @@ import brandsGithubSvg from "../assets/images/brands/github.svg";
 import brandsGravatarSvg from "../assets/images/brands/gravatar.svg";
 import brandsGSuiteSvg from "../assets/images/brands/gmail.svg";
 
+import { useTranslation } from "react-i18next";
+
 function Left() {
+  const { t } = useTranslation();
   const GAME = "https://sarthakworks.github.io/2048/";
   const EXTENSION =
     "https://chrome.google.com/webstore/detail/dark-mode-kali/chbdmdapmeflnkgibpgbdcblndooljff?hl=en-GB";
@@ -19,7 +22,7 @@ function Left() {
     <>
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title mb-3">Social contacts</h5>
+          <h5 className="card-title mb-3">{t("social_contacts")}</h5>
           {/* LinkedIn */}
           <div className="card mb-1 shadow-none border">
             <div className="p-2">
@@ -38,9 +41,9 @@ function Left() {
                     rel="noreferrer"
                     className="text-muted fw-bold"
                   >
-                    LinkedIn
+                    {t("linkedin")}
                   </a>
-                  <p className="mb-0">Profile</p>
+                  <p className="mb-0">{t("profile")}</p>
                 </div>
                 <div className="col-auto">
                   <a
@@ -73,9 +76,9 @@ function Left() {
                     rel="noreferrer"
                     className="text-muted fw-bold"
                   >
-                    GitHub
+                    {t("github")}
                   </a>
-                  <p className="mb-0">Repositories</p>
+                  <p className="mb-0">{t("repositories")}</p>
                 </div>
                 <div className="col-auto">
                   <a
@@ -106,9 +109,9 @@ function Left() {
                     href="mailto:sarthak.workplace@gmail.com"
                     className="text-muted fw-bold"
                   >
-                    Mail
+                    {t("mail")}
                   </a>
-                  <p className="mb-0">Contact</p>
+                  <p className="mb-0">{t("contact")}</p>
                 </div>
                 <div className="col-auto">
                   <a
@@ -139,9 +142,9 @@ function Left() {
                     rel="noreferrer"
                     className="text-muted fw-bold"
                   >
-                    Gravatar
+                    {t("gravatar")}
                   </a>
-                  <p className="mb-0">Profile</p>
+                  <p className="mb-0">{t("profile")}</p>
                 </div>
                 <div className="col-auto">
                   <a
@@ -161,7 +164,7 @@ function Left() {
 
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title mb-3">Files</h5>
+          <h5 className="card-title mb-3">{t("files")}</h5>
           <div className="card mb-1 shadow-none border">
             <div className="p-2">
               <div className="row align-items-center">
@@ -202,7 +205,7 @@ function Left() {
 
       <div className="card">
         <div className="card-body">
-          <h5 className="card-title mb-3">Fun things</h5>
+          <h5 className="card-title mb-3">{t("fun_things")}</h5>
           <div className="card mb-1 shadow-none border">
             <div className="p-2">
               <div className="row align-items-center">
@@ -220,7 +223,7 @@ function Left() {
                     rel="noreferrer"
                     className="text-muted fw-bold"
                   >
-                    2048 GAME
+                    {t("game_2048")}
                   </a>
                   <p className="mb-0">2.3 MB</p>
                 </div>
@@ -255,7 +258,7 @@ function Left() {
                     rel="noreferrer"
                     className="text-muted fw-bold"
                   >
-                    Chrome Extension
+                    {t("chrome_extension")}
                   </a>
                   <p className="mb-0">
                     <span className="badge bg-success">
@@ -294,7 +297,7 @@ function Left() {
                     rel="noreferrer"
                     className="text-muted fw-bold"
                   >
-                    Android Game
+                    {t("android_game")}
                   </a>
                   <p className="mb-0">
                     <span className="badge bg-success">
