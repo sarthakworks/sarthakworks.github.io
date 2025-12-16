@@ -2,7 +2,6 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/shared/Footer";
 import LeftMenu from "./components/shared/LeftMenu";
-import Settings from "./components/shared/Settings";
 import SettingToggle from "./components/shared/SettingToggle";
 import Loading from "./components/shared/Loading";
 
@@ -78,7 +77,6 @@ function App() {
           </div>
         </div>
       </div>
-      <Settings />
     </BrowserRouter>
   );
 }
