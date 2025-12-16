@@ -16322,14 +16322,21 @@ body[data-layout-color="dark"] .topnav-navbar-dark .app-search span {
 .footer {
   border-top: 1px solid rgba(152, 166, 173, 0.2);
   bottom: 0;
-  padding: 19px 24px 20px;
   position: absolute;
   right: 0;
   color: #98a6ad;
   left: 260px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  margin-left: 2rem;
+  margin-left: 0;
+  padding: 20px 0;
+}
+
+@media (min-width: 500px) {
+  .footer {
+    margin-left: 2rem;
+    padding: 20px 24px;
+  }
 }
 
 .footer .footer-links a {
