@@ -34,6 +34,12 @@ function LeftMenu() {
             </Link>
           </li>
           <li className="side-nav-item">
+            <Link to="/agile-tools" className="side-nav-link">
+              <i className="uil-clipboard-alt" />
+              <span> Agile Tools </span>
+            </Link>
+          </li>
+          <li className="side-nav-item">
             <Link to="/aes-tool" className="side-nav-link">
               <i className="uil-padlock" />
               <span> AES Encryption </span>

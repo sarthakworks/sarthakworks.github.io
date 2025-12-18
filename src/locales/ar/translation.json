@@ -27,5 +27,18 @@
     "compress_image": "ضغط الصورة",
     "compress_image_desc": "ضغط JPG و PNG و SVG و GIF مع توفير المساحة والحفاظ على الجودة.",
     "blur_sensitive_info": "طمس المعلومات الحساسة",
-    "blur_sensitive_info_desc": "تعتيم أو طمس مناطق محددة من الصورة لإخفاء البيانات الحساسة."
+    "blur_sensitive_info_desc": "تعتيم أو طمس مناطق محددة من الصورة لإخفاء البيانات الحساسة.",
+    "enter_min_names": "الرجاء إدخال اسمين على الأقل.",
+    "back_to_agile": "العودة إلى أدوات أجايل",
+    "enter_names_label": "أدخل الأسماء (مفصولة بفواصل)",
+    "enter_names_placeholder": "أليس، بوب، تشارلي...",
+    "create_wheel": "إنشاء العجلة",
+    "winner_title": "الفائز!",
+    "remove_spin_again": "إزالة وتدوير مرة أخرى",
+    "keep_spin_again": "الاحتفاظ وتدوير مرة أخرى",
+    "spinning": "جاري التدوير...",
+    "spin": "تدوير",
+    "reset": "إعادة تعيين",
+    "active_names": "الأسماء النشطة ({{count}})",
+    "selected_removed": "محدد / محذوف"
 }

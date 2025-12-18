@@ -33,6 +33,14 @@ const RemovePdfPassword = lazy(() =>
   import("./Tools/pdftools/RemovePdfPassword/RemovePdfPassword")
 );
 
+const AgileTools = lazy(() => import("./Tools/agiletools/AgileTools"));
+const RandomNameSelector = lazy(() =>
+  import("./Tools/agiletools/RandomNameSelector/RandomNameSelector")
+);
+const SprintRetro = lazy(() =>
+  import("./Tools/agiletools/SprintRetro/SprintRetro")
+);
+
 function App() {
   return (
     <BrowserRouter>
@@ -58,6 +66,15 @@ function App() {
                 <Route
                   path="pdf-tools/unlock"
                   element={<RemovePdfPassword />}
+                />
+                <Route path="agile-tools" element={<AgileTools />} />
+                <Route
+                  path="agile-tools/random-name"
+                  element={<RandomNameSelector />}
+                />
+                <Route
+                  path="agile-tools/sprint-retro"
+                  element={<SprintRetro />}
                 />
                 <Route path="aes-tool" element={<AesTool />} />
                 <Route path="/Random" element={<Random />} />

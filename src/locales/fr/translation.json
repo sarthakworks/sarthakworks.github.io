@@ -27,5 +27,18 @@
     "compress_image": "Compresser Image",
     "compress_image_desc": "Compressez JPG, PNG, SVG et GIF tout en économisant de l'espace et en maintenant la qualité.",
     "blur_sensitive_info": "Flouter Infos Sensibles",
-    "blur_sensitive_info_desc": "Pixellisez ou floutez des zones spécifiques d'une image pour masquer des données sensibles."
+    "blur_sensitive_info_desc": "Pixellisez ou floutez des zones spécifiques d'une image pour masquer des données sensibles.",
+    "enter_min_names": "Veuillez entrer au moins 2 noms.",
+    "back_to_agile": "Retour aux outils agiles",
+    "enter_names_label": "Entrer les noms (séparés par des virgules)",
+    "enter_names_placeholder": "Alice, Bob, Charlie...",
+    "create_wheel": "Créer la roue",
+    "winner_title": "Gagnant !",
+    "remove_spin_again": "Retirer & Relancer",
+    "keep_spin_again": "Garder & Relancer",
+    "spinning": "Rotation...",
+    "spin": "TOURNER",
+    "reset": "Réinitialiser",
+    "active_names": "Noms actifs ({{count}})",
+    "selected_removed": "Sélectionné / Retiré"
 }

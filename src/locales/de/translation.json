@@ -27,5 +27,18 @@
     "compress_image": "Bild komprimieren",
     "compress_image_desc": "Komprimieren Sie JPG, PNG, SVG und GIFs bei gleichbleibender Qualität.",
     "blur_sensitive_info": "Sensible Infos verwischen",
-    "blur_sensitive_info_desc": "Verpixeln oder verwischen Sie bestimmte Bereiche eines Bildes, um sensible Daten zu verbergen."
+    "blur_sensitive_info_desc": "Verpixeln oder verwischen Sie bestimmte Bereiche eines Bildes, um sensible Daten zu verbergen.",
+    "enter_min_names": "Bitte geben Sie mindestens 2 Namen ein.",
+    "back_to_agile": "Zurück zu Agile Tools",
+    "enter_names_label": "Namen eingeben (kommagetrennt)",
+    "enter_names_placeholder": "Alice, Bob, Charlie...",
+    "create_wheel": "Rad erstellen",
+    "winner_title": "Gewinner!",
+    "remove_spin_again": "Entfernen & Nochmal drehen",
+    "keep_spin_again": "Behalten & Nochmal drehen",
+    "spinning": "Drehen...",
+    "spin": "DREHEN",
+    "reset": "Zurücksetzen",
+    "active_names": "Aktive Namen ({{count}})",
+    "selected_removed": "Ausgewählt / Entfernt"
 }
