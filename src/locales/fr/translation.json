@@ -107,5 +107,6 @@
     "sprint_retro_desc": "Tableau rétro simple avec les colonnes Commencer, Arrêter et Continuer.",
     "sprint_start": "Commencer",
     "sprint_stop": "Arrêter",
-    "sprint_continue": "Continuer"
+    "sprint_continue": "Continuer",
+    "about_me": "À propos de moi"
 }

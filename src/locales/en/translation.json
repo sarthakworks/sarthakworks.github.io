@@ -108,5 +108,6 @@
     "spin": "SPIN",
     "reset": "Reset",
     "active_names": "Active Names ({{count}})",
-    "selected_removed": "Selected / Removed"
+    "selected_removed": "Selected / Removed",
+    "about_me": "About Me"
 }

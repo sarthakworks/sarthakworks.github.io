@@ -101,6 +101,10 @@ function App() {
                   element={<SprintRetro />}
                 />
                 <Route path="aes-tool" element={<AesTool />} />
+                <Route
+                  path="/about"
+                  element={<Homepage showPortfolio={true} />}
+                />
                 <Route path="/Random" element={<Random />} />
                 <Route path="Interview" element={<Interview />}>
                   <Route path="" element={<Javascript />}></Route>

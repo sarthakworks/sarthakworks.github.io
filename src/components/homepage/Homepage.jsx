@@ -1,13 +1,14 @@
 import Right from "./Right";
 import Left from "./Left";
+import Portfolio from "./Portfolio";
 
-function Homepage() {
+function Homepage({ showPortfolio = false }) {
   return (
     <div className="content">
       <div className="container-fluid mt-4">
         <div className="row">
           <div className="col-sm-12 col-xxl-8">
-            <Right />
+            {showPortfolio ? <Portfolio /> : <Right />}
           </div>
           <div className="col-sm-12 col-xxl-4">
             <Left />

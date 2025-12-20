@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Right() {
+function Portfolio() {
   const [isCopied, setCopied] = useState(false);
   return (
     <>
@@ -83,7 +83,7 @@ function Right() {
                         </span>
                       </p>
                       <p className="text-muted mt-2 mb-0 pb-3">
-                        Working on cutting edge front end technologies.
+                        Working on cutting edge technologies.
                       </p>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ function Right() {
                 <div className="mb-4">
                   <h5>Career Start Date</h5>
                   <p>
-                    24 January 2017
+                    Jan, 2017
                     {/* <small className="text-muted">1:00 PM</small> */}
                   </p>
                 </div>
@@ -197,4 +197,4 @@ function Right() {
   );
 }
 
-export default Right;
+export default Portfolio;

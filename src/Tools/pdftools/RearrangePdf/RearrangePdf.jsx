@@ -310,7 +310,7 @@ const RearrangePdf = () => {
 
             <div className="d-flex gap-2">
               <button
-                className="btn btn-success flex-grow-1 fw-bold py-2"
+                className="btn btn-success grow fw-bold py-2"
                 onClick={generatePdf}
                 disabled={pages.length === 0 || isProcessing}
               >
@@ -338,7 +338,7 @@ const RearrangePdf = () => {
                     <i className="mdi mdi-download me-1"></i> Download
                   </a>
                   <button
-                    className="btn btn-info fw-bold py-2"
+                    className="btn btn-light border-secondary text-start"
                     onClick={navigateToCompress}
                     title="Feed to Compress Tool"
                   >

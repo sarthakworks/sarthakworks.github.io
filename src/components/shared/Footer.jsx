@@ -14,7 +14,7 @@ function Footer() {
             <div className="text-md-end footer-links">
               <Link to="/Interview">{t("content")}</Link>
               <Link to="/Random">{t("mini_projects")}</Link>
-              <Link to="/">
+              <Link to="/about">
                 {" "}
                 {t("made_with")} <span style={{ color: "red" }}>❤</span>{" "}
                 {t("by")} Sarthak

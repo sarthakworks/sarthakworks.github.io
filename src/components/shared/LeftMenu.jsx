@@ -19,7 +19,6 @@ function LeftMenu() {
             <span className="leftbar-user-name">Sarthak Bansal</span>
           </Link>
           <p className="text-muted mb-0 font-13">sarthak.workplace@gmail.com</p>
-          <p className="text-muted mb-1 font-13">Delhi, India</p>
         </div>
         <ul className="side-nav">
           <li className="side-nav-title side-nav-item">{t("apps")}</li>
@@ -46,6 +45,12 @@ function LeftMenu() {
             <Link to="/aes-tool" className="side-nav-link">
               <i className="uil-padlock" />
               <span> {t("aes_encryption")} </span>
+            </Link>
+          </li>
+          <li className="side-nav-item">
+            <Link to="/about" className="side-nav-link">
+              <i className="uil-user" />
+              <span>{t("about_me")}</span>
             </Link>
           </li>
         </ul>
