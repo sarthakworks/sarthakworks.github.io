@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CryptoJS from "crypto-js";
+import { useTranslation } from "react-i18next";
 import Card from "../../components/shared/Card";
 
 const modes = {
@@ -24,6 +25,7 @@ const updateState = (setter, key, value) =>
   setter((prev) => ({ ...prev, [key]: value }));
 
 const CommonOptions = ({ prefix, state, setter }) => {
+  const { t } = useTranslation();
   const isECB = state.mode === "ECB";
   const isNoPadding =
     state.padding === "NoPadding" || state.padding === "ZeroPadding";
@@ -32,7 +34,7 @@ const CommonOptions = ({ prefix, state, setter }) => {
     <>
       <div className="mb-3">
         <label htmlFor={`${prefix}-mode`} className="form-label">
-          Select Cipher Mode
+          {t("select_cipher_mode")}
         </label>
         <select
           id={`${prefix}-mode`}
@@ -47,14 +49,12 @@ const CommonOptions = ({ prefix, state, setter }) => {
           ))}
         </select>
         {isECB && (
-          <small className="text-muted d-block mt-1">
-            ECB mode does not use an Initialization Vector (IV).
-          </small>
+          <small className="text-muted d-block mt-1">{t("ecb_warning")}</small>
         )}
       </div>
       <div className="mb-3">
         <label htmlFor={`${prefix}-padding`} className="form-label">
-          Select Padding
+          {t("select_padding")}
         </label>
         <select
           id={`${prefix}-padding`}
@@ -70,22 +70,19 @@ const CommonOptions = ({ prefix, state, setter }) => {
         </select>
         {isNoPadding && (
           <small className="text-warning d-block mt-1">
-            <i className="uil-exclamation-triangle"></i> Ensure input is a
-            multiple of 16 bytes for this padding.
+            <i className="uil-exclamation-triangle"></i> {t("padding_warning")}
           </small>
         )}
       </div>
       <div className="mb-3">
         <label htmlFor={`${prefix}-iv`} className="form-label">
-          Enter IV (Optional)
+          {t("enter_iv")}
         </label>
         <input
           type="text"
           className="form-control"
           id={`${prefix}-iv`}
-          placeholder={
-            isECB ? "Not applicable for ECB" : "Enter initialization vector"
-          }
+          placeholder={isECB ? t("iv_ecb_placeholder") : t("iv_placeholder")}
           value={state.iv}
           onChange={(e) => updateState(setter, "iv", e.target.value)}
           disabled={isECB}
@@ -93,7 +90,7 @@ const CommonOptions = ({ prefix, state, setter }) => {
       </div>
       <div className="mb-3">
         <label htmlFor={`${prefix}-keysize`} className="form-label">
-          Key Size in Bits
+          {t("key_size")}
         </label>
         <select
           id={`${prefix}-keysize`}
@@ -107,25 +104,25 @@ const CommonOptions = ({ prefix, state, setter }) => {
             </option>
           ))}
         </select>
-        <small className="text-muted">Target key size for derivation.</small>
+        <small className="text-muted">{t("key_derivation_note")}</small>
       </div>
       <div className="mb-3">
         <label htmlFor={`${prefix}-secret`} className="form-label">
-          Enter Secret Key
+          {t("enter_secret_key")}
         </label>
         <div className="input-group mb-2">
           <input
             type="text"
             className="form-control"
             id={`${prefix}-secret`}
-            placeholder="Enter secret key"
+            placeholder={t("enter_secret_key")}
             value={state.secret}
             onChange={(e) => updateState(setter, "secret", e.target.value)}
           />
           <span className="input-group-text">{state.secret.length} chars</span>
         </div>
         <div className="d-flex align-items-center">
-          <span className="me-2 text-muted small">Treat Key As:</span>
+          <span className="me-2 text-muted small">{t("treat_key_as")}</span>
           <div className="form-check form-check-inline mb-0">
             <input
               className="form-check-input"
@@ -140,7 +137,7 @@ const CommonOptions = ({ prefix, state, setter }) => {
               className="form-check-label small"
               htmlFor={`${prefix}-keyPass`}
             >
-              Passphrase
+              {t("passphrase")}
             </label>
           </div>
           <div className="form-check form-check-inline mb-0">
@@ -157,7 +154,7 @@ const CommonOptions = ({ prefix, state, setter }) => {
               className="form-check-label small"
               htmlFor={`${prefix}-keyUtf8`}
             >
-              Raw Text (Utf8)
+              {t("raw_text")}
             </label>
           </div>
         </div>
@@ -167,6 +164,7 @@ const CommonOptions = ({ prefix, state, setter }) => {
 };
 
 const AesTool = () => {
+  const { t } = useTranslation();
   const defaultState = {
     text: "",
     mode: "CBC",
@@ -196,9 +194,9 @@ const AesTool = () => {
     if (!state.text || !state.secret) {
       setter((prev) => ({
         ...prev,
-        error: `Please enter ${
-          isEncrypt ? "text" : "ciphertext"
-        } and secret key.`,
+        error: t("error_missing_inputs", {
+          inputType: isEncrypt ? t("plain_text_label") : t("enter_cipher_text"),
+        }),
       }));
       return;
     }
@@ -245,9 +243,9 @@ const AesTool = () => {
     } catch (err) {
       setter((prev) => ({
         ...prev,
-        error: `${
-          isEncrypt ? "Encryption" : "Decryption"
-        } failed. Check inputs.`,
+        error: t("error_failed", {
+          processType: isEncrypt ? t("encrypt") : t("decrypt"),
+        }),
       }));
       console.error(err);
     }
@@ -258,22 +256,22 @@ const AesTool = () => {
       <div className="row">
         <div className="col-12">
           <div className="page-title-box">
-            <h4 className="page-title">AES Encryption & Decryption Tool</h4>
+            <h4 className="page-title">{t("aes_tool_title")}</h4>
           </div>
         </div>
 
         {/* Encryption Column */}
         <div className="col-lg-6">
-          <Card title="AES Encryption">
+          <Card title={t("aes_encryption_card")}>
             <div className="mb-3">
               <label htmlFor="encrypt-input" className="form-label">
-                Enter Plain Text to Encrypt
+                {t("enter_plain_text")}
               </label>
               <textarea
                 className="form-control"
                 id="encrypt-input"
                 rows="4"
-                placeholder="Enter plain text to be Encrypted"
+                placeholder={t("enter_plain_text_placeholder")}
                 value={encState.text}
                 onChange={(e) =>
                   updateState(setEncState, "text", e.target.value)
@@ -283,7 +281,7 @@ const AesTool = () => {
             <CommonOptions prefix="enc" state={encState} setter={setEncState} />
             <div className="mb-3">
               <span className="form-label d-block mb-1">
-                Output Text Format
+                {t("output_format")}
               </span>
               {["Base64", "Hex"].map((fmt) => (
                 <div key={fmt} className="form-check form-check-inline">
@@ -306,21 +304,21 @@ const AesTool = () => {
               className="btn  btn-success w-100 fw-bold mb-3"
               onClick={() => process(true)}
             >
-              Encrypt
+              {t("encrypt")}
             </button>
             {encState.error && (
               <div className="text-danger mb-2">{encState.error}</div>
             )}
             <div className="mb-3">
               <label htmlFor="encrypt-output" className="form-label">
-                AES Encrypted Output
+                {t("encrypted_output")}
               </label>
               <textarea
                 className="form-control bg-light"
                 id="encrypt-output"
                 rows="4"
                 readOnly
-                placeholder="Result goes here"
+                placeholder={t("result_placeholder")}
                 value={encState.output}
               ></textarea>
             </div>
@@ -329,16 +327,16 @@ const AesTool = () => {
 
         {/* Decryption Column */}
         <div className="col-lg-6">
-          <Card title="AES Decryption">
+          <Card title={t("aes_decryption_card")}>
             <div className="mb-3">
               <label htmlFor="decrypt-input" className="form-label">
-                AES Encrypted Text
+                {t("enter_cipher_text")}
               </label>
               <textarea
                 className="form-control"
                 id="decrypt-input"
                 rows="4"
-                placeholder="Enter text to be Decrypted"
+                placeholder={t("enter_cipher_text_placeholder")}
                 value={decState.text}
                 onChange={(e) =>
                   updateState(setDecState, "text", e.target.value)
@@ -348,7 +346,7 @@ const AesTool = () => {
             <CommonOptions prefix="dec" state={decState} setter={setDecState} />
             <div className="mb-3">
               <span className="form-label d-block mb-1">
-                Output Text Format
+                {t("output_format")}
               </span>
               {["Utf8", "Base64"].map((fmt) => (
                 <div key={fmt} className="form-check form-check-inline">
@@ -362,7 +360,7 @@ const AesTool = () => {
                     onChange={() => updateState(setDecState, "format", fmt)}
                   />
                   <label className="form-check-label" htmlFor={`dec${fmt}`}>
-                    {fmt === "Utf8" ? "Plain-Text" : fmt}
+                    {fmt === "Utf8" ? t("plain_text_label") : fmt}
                   </label>
                 </div>
               ))}
@@ -371,21 +369,21 @@ const AesTool = () => {
               className="btn btn-danger w-100 fw-bold mb-3"
               onClick={() => process(false)}
             >
-              Decrypt
+              {t("decrypt")}
             </button>
             {decState.error && (
               <div className="text-danger mb-2">{decState.error}</div>
             )}
             <div className="mb-3">
               <label htmlFor="decrypt-output" className="form-label">
-                AES Decrypted Output
+                {t("decrypted_output")}
               </label>
               <textarea
                 className="form-control bg-light"
                 id="decrypt-output"
                 rows="4"
                 readOnly
-                placeholder="Decrypted result goes here"
+                placeholder={t("decrypted_result_placeholder")}
                 value={decState.output}
               ></textarea>
             </div>

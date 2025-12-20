@@ -49,7 +49,7 @@ function SprintRetro() {
             <input
               type="text"
               className="form-control"
-              placeholder="Add item..."
+              placeholder={t("add_item_placeholder")}
               value={inputs[type]}
               onChange={(e) => setInputs({ ...inputs, [type]: e.target.value })}
               onKeyDown={(e) => e.key === "Enter" && handleAddItem(type)}
@@ -85,7 +85,7 @@ function SprintRetro() {
             ))}
             {items.length === 0 && (
               <div className="text-center text-muted mt-3">
-                <small>No items yet</small>
+                <small>{t("no_items_yet")}</small>
               </div>
             )}
           </div>
@@ -104,7 +104,7 @@ function SprintRetro() {
               to="/agile-tools"
               className="btn btn-sm btn-outline-secondary"
             >
-              Back to Agile Tools
+              {t("back_to_agile")}
             </Link>
           </div>
         </div>
@@ -112,21 +112,21 @@ function SprintRetro() {
 
       <div className="row">
         {renderColumn(
-          "Start",
+          t("sprint_start"),
           "start",
           startItems,
           "text-success",
           "bg-success-lighten"
         )}
         {renderColumn(
-          "Stop",
+          t("sprint_stop"),
           "stop",
           stopItems,
           "text-danger",
           "bg-danger-lighten"
         )}
         {renderColumn(
-          "Continue",
+          t("sprint_continue"),
           "continue",
           continueItems,
           "text-info",

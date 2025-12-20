@@ -321,7 +321,7 @@ function RandomNameSelector() {
                           <button
                             className="btn btn-sm btn-light text-muted"
                             onClick={() => toggleItemStatus(item, false)}
-                            title="Move to Removed"
+                            title={t("move_to_removed")}
                           >
                             <i className="mdi mdi-arrow-down"></i>
                           </button>
@@ -351,7 +351,7 @@ function RandomNameSelector() {
                             <button
                               className="btn btn-sm btn-light text-muted"
                               onClick={() => toggleItemStatus(item, true)}
-                              title="Move to Active"
+                              title={t("move_to_active")}
                             >
                               <i className="mdi mdi-arrow-up"></i>
                             </button>

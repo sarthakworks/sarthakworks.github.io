@@ -291,7 +291,7 @@ const RearrangePdf = () => {
                         </button>
 
                         <div
-                          className="card-body p-1 d-flex align-items-center justify-content-center bg-light"
+                          className="d-flex align-items-center justify-content-center bg-light border rounded grow"
                           style={{ minHeight: "150px" }}
                         >
                           <img

@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import usersAvatar2Png from "../assets/images/users/avatar-2.png";
+
 function LeftMenu() {
+  const { t } = useTranslation();
   return (
     <>
       <div className="card leftside-menu leftside-menu-detached show">
@@ -19,30 +22,30 @@ function LeftMenu() {
           <p className="text-muted mb-1 font-13">Delhi, India</p>
         </div>
         <ul className="side-nav">
-          <li className="side-nav-title side-nav-item">Apps</li>
+          <li className="side-nav-title side-nav-item">{t("apps")}</li>
 
           <li className="side-nav-item">
             <Link to="/image-tools" className="side-nav-link">
               <i className="uil-image-check" />
-              <span> Image Tools </span>
+              <span> {t("image_tools")} </span>
             </Link>
           </li>
           <li className="side-nav-item">
             <Link to="/pdf-tools" className="side-nav-link">
               <i className="uil-file-alt" />
-              <span> PDF Tools </span>
+              <span> {t("pdf_tools")} </span>
             </Link>
           </li>
           <li className="side-nav-item">
             <Link to="/agile-tools" className="side-nav-link">
               <i className="uil-clipboard-alt" />
-              <span> Agile Tools </span>
+              <span> {t("agile_tools")} </span>
             </Link>
           </li>
           <li className="side-nav-item">
             <Link to="/aes-tool" className="side-nav-link">
               <i className="uil-padlock" />
-              <span> AES Encryption </span>
+              <span> {t("aes_encryption")} </span>
             </Link>
           </li>
         </ul>

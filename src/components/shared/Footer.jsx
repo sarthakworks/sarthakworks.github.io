@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 function Footer() {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="container-fluid">
@@ -9,11 +12,12 @@ function Footer() {
           </div>
           <div className="col-md-6 col-sm-12">
             <div className="text-md-end footer-links">
-              <Link to="/Interview">Content</Link>
-              <Link to="/Random">Mini Projects</Link>
+              <Link to="/Interview">{t("content")}</Link>
+              <Link to="/Random">{t("mini_projects")}</Link>
               <Link to="/">
                 {" "}
-                Made with <span style={{ color: "red" }}>❤</span> by Sarthak
+                {t("made_with")} <span style={{ color: "red" }}>❤</span>{" "}
+                {t("by")} Sarthak
               </Link>
             </div>
           </div>
