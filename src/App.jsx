@@ -23,10 +23,23 @@ const CompressImage = lazy(() =>
 );
 const ImageTools = lazy(() => import("./Tools/imagetools/ImageTools"));
 const BlurImage = lazy(() => import("./Tools/imagetools/BlurImage/BlurImage"));
+const RemoveBackground = lazy(() =>
+  import("./Tools/imagetools/RemoveBackground/RemoveBackground")
+);
+const ImageToText = lazy(() =>
+  import("./Tools/imagetools/ImageToText/ImageToText")
+);
 const AesTool = lazy(() => import("./Tools/aes-encrypt-decrypt/AesTool"));
 
 const PdfTools = lazy(() => import("./Tools/pdftools/PdfTools"));
 const MergePdf = lazy(() => import("./Tools/pdftools/MergePdf/MergePdf"));
+const CompressPdf = lazy(() =>
+  import("./Tools/pdftools/CompressPdf/CompressPdf")
+);
+const ImageToPdf = lazy(() => import("./Tools/pdftools/ImageToPdf/ImageToPdf"));
+const RearrangePdf = lazy(() =>
+  import("./Tools/pdftools/RearrangePdf/RearrangePdf")
+);
 const SplitPdf = lazy(() => import("./Tools/pdftools/SplitPdf/SplitPdf"));
 const PdfToImage = lazy(() => import("./Tools/pdftools/PdfToImage/PdfToImage"));
 const RemovePdfPassword = lazy(() =>
@@ -59,8 +72,19 @@ function App() {
                   element={<CompressImage />}
                 />
                 <Route path="image-tools/blur" element={<BlurImage />} />
+                <Route
+                  path="image-tools/remove-background"
+                  element={<RemoveBackground />}
+                />
+                <Route
+                  path="image-tools/image-to-text"
+                  element={<ImageToText />}
+                />
                 <Route path="pdf-tools" element={<PdfTools />} />
                 <Route path="pdf-tools/merge" element={<MergePdf />} />
+                <Route path="pdf-tools/compress" element={<CompressPdf />} />
+                <Route path="pdf-tools/image-to-pdf" element={<ImageToPdf />} />
+                <Route path="pdf-tools/rearrange" element={<RearrangePdf />} />
                 <Route path="pdf-tools/split" element={<SplitPdf />} />
                 <Route path="pdf-tools/to-image" element={<PdfToImage />} />
                 <Route

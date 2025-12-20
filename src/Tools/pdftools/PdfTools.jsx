@@ -11,13 +11,31 @@ function PdfTools({ embedded = false }) {
 
   const tools = [
     {
-      name: t("merge_pdf"),
-      path: "/pdf-tools/merge",
-      icon: "mdi mdi-file-document-multiple-outline",
-      desc: t("merge_pdf_desc"),
-      color: "primary",
-      bg: "bg-primary-lighten",
-      text: "text-primary",
+      name: t("rearrange_pdf") || "Organize & Edit PDF",
+      path: "/pdf-tools/rearrange",
+      icon: "mdi mdi-view-grid-plus-outline",
+      desc: t("rearrange_pdf_desc") || "Merge, re-order, and delete PDF pages",
+      color: "danger",
+      bg: "bg-danger-lighten",
+      text: "text-danger",
+    },
+    {
+      name: t("compress_pdf") || "Compress PDF",
+      path: "/pdf-tools/compress",
+      icon: "mdi mdi-zip-box-outline",
+      desc: t("compress_pdf_desc") || "Reduce PDF file size",
+      color: "info",
+      bg: "bg-info-lighten",
+      text: "text-info",
+    },
+    {
+      name: t("image_to_pdf") || "Image to PDF",
+      path: "/pdf-tools/image-to-pdf",
+      icon: "mdi mdi-image-plus",
+      desc: t("image_to_pdf_desc") || "Convert images to a single PDF",
+      color: "warning",
+      bg: "bg-warning-lighten",
+      text: "text-warning",
     },
     {
       name: t("split_pdf"),
@@ -45,6 +63,15 @@ function PdfTools({ embedded = false }) {
       color: "warning",
       bg: "bg-warning-lighten",
       text: "text-warning",
+    },
+    {
+      name: t("merge_pdf"),
+      path: "/pdf-tools/merge",
+      icon: "mdi mdi-file-document-multiple-outline",
+      desc: t("merge_pdf_desc"),
+      color: "primary",
+      bg: "bg-primary-lighten",
+      text: "text-primary",
     },
   ];
 

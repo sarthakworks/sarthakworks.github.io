@@ -37,6 +37,24 @@ function ImageTools({ embedded = false }) {
       bg: "bg-warning-lighten",
       text: "text-warning",
     },
+    {
+      name: t("remove_bg"),
+      path: "/image-tools/remove-background",
+      icon: "mdi mdi-image-remove",
+      desc: t("remove_bg_desc"),
+      color: "danger",
+      bg: "bg-danger-lighten",
+      text: "text-danger",
+    },
+    {
+      name: t("image_to_text"),
+      path: "/image-tools/image-to-text",
+      icon: "mdi mdi-text-recognition",
+      desc: t("image_to_text_desc"),
+      color: "info",
+      bg: "bg-info-lighten",
+      text: "text-info",
+    },
   ];
 
   return (
