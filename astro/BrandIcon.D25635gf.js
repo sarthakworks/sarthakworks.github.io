@@ -1,0 +1,1 @@
+import{j as o}from"./jsx-runtime.D_zvdyIk.js";import"./index.BR1w_nJd.js";function d({href:n=null,title:a,className:s="",iconClassName:e="h-7 w-7 object-contain",src:t="/favicon.svg",alt:i="",...c}){const r=o.jsx("img",{src:t,alt:i,"aria-hidden":i?void 0:"true",title:a,className:e,...c});return n?o.jsx("a",{href:n,className:s,"aria-label":a,children:r}):r}export{d as B};
