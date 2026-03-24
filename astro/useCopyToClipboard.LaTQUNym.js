@@ -1,0 +1,1 @@
+import{r as o}from"./index.BR1w_nJd.js";function l(){const[t,e]=o.useState(null),r=o.useCallback((a,s)=>{navigator.clipboard.writeText(a),e(s),setTimeout(()=>e(null),2e3)},[]);return{copiedId:t,handleCopy:r}}export{l as u};

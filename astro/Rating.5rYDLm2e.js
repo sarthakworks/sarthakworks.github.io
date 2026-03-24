@@ -1,0 +1,6 @@
+import{j as t}from"./jsx-runtime.D_zvdyIk.js";import{r}from"./index.BR1w_nJd.js";import{c as u}from"./createLucideIcon._FvKnKwF.js";import"./_commonjsHelpers.D6-XlEtG.js";/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const m=[["path",{d:"M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z",key:"r04s7s"}]],y=u("star",m),j=()=>{const[l,a]=r.useState(2),[i,o]=r.useState(0);return t.jsx("div",{className:"flex gap-1 justify-center",children:[...new Array(5).keys()].map(s=>{const e=s+1,c=e<=(i||l);return t.jsx("button",{type:"button",className:"focus:outline-none transition-transform hover:scale-110",onClick:()=>a(e),onMouseEnter:()=>o(e),onMouseLeave:()=>o(0),onKeyDown:n=>{(n.key==="Enter"||n.key===" ")&&a(e)},children:t.jsx(y,{size:32,className:`${c?"text-yellow-400 fill-yellow-400":"text-gray-300"} transition-colors`})},s)})})};export{j as default};

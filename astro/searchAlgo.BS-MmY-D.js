@@ -1,0 +1,6 @@
+import{c as l}from"./createLucideIcon._FvKnKwF.js";import{r as t}from"./index.BR1w_nJd.js";import{F as d}from"./fuse.Dw8P0qyA.js";/**
+ * @license lucide-react v0.563.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const m=[["path",{d:"m21 21-4.34-4.34",key:"14j7rj"}],["circle",{cx:"11",cy:"11",r:"8",key:"4ej97u"}]],y=l("search",m),f=()=>({keys:[{name:"name",weight:.5},{name:"search_keys",weight:.35},{name:"desc",weight:.15}],threshold:.6,includeScore:!0,minMatchCharLength:1,ignoreLocation:!0,distance:100,useExtendedSearch:!1,isCaseSensitive:!1}),v=c=>{const[n,r]=t.useState(""),[i,s]=t.useState(!1),a=t.useRef(null),h=t.useMemo(()=>new d(c,f()),[c]),u=t.useMemo(()=>n.trim()?h.search(n).map(e=>e.item):[],[n,h]);return t.useEffect(()=>{const e=o=>{a.current&&!a.current.contains(o.target)&&s(!1)};return document.addEventListener("mousedown",e),()=>document.removeEventListener("mousedown",e)},[]),{searchQuery:n,setSearchQuery:r,showDropdown:i,setShowDropdown:s,filteredTools:u,searchRef:a,handleSearchChange:e=>{const o=e.target.value;r(o),s(o.trim().length>0)},handleToolClick:e=>{window.location.href=e,r(""),s(!1)},clearSearch:()=>{r(""),s(!1)}}};export{y as S,v as u};
