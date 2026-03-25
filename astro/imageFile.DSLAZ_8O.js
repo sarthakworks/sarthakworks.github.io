@@ -1,0 +1,1 @@
+const n=async t=>{const e=URL.createObjectURL(t),a=new Image;return await new Promise((o,i)=>{a.onload=()=>o(),a.onerror=()=>i(new Error("Failed to load image.")),a.src=e}),URL.revokeObjectURL(e),a},r=async t=>{const e=await n(t);return{width:e.width,height:e.height,aspectRatio:e.width/e.height}};export{n as a,r as l};
