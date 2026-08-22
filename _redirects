@@ -1,0 +1,5 @@
+# Cloudflare Pages: serve the live-share room app for any /share/<slug> path.
+# Arbitrary room slugs can't be prerendered, so every sub-path is rewritten
+# (200 = rewrite, URL stays intact) to the placeholder room page, which reads
+# the real slug from the URL on the client.
+/share/*  /share/new/index.html  200
